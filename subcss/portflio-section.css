@@ -1,0 +1,111 @@
+     /* Portfolio - section*/
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-yellow);
+}
+
+.portfolio > h2{
+    display: flex;
+    justify-content: center;
+    padding: 30px 5px;
+    margin: 0px;
+    font-size: 32px;
+}
+
+.my-works{
+    display: grid;
+    gap: 52px;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, 20rem);
+    grid-auto-rows: 10px;
+    padding: 30px;
+}
+
+.card-large{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    grid-row-end: span 10;
+}
+
+.card-small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    grid-row-end: span 6;
+}
+
+.card-large > video{
+    height: 600px;
+    border-radius: 12px;
+}
+
+.card-small > video{
+    height: 340px;
+    border-radius: 12px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin: 20px 0px;
+}
+
+.portfolio-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    width: 200px;
+    height: 60px;
+    border-radius: 25px;
+    
+}
+
+.portfolio-button > a{
+    text-decoration: none;
+    color: black;
+    padding: 20px 40px;
+}
+
+.portfolio-button:hover{
+    background-color: #edf8ff;
+}
+
+@media (max-width: 700px){
+
+    .portfolio > h2{
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .my-works{
+        padding: 15px;
+        gap: 41px;
+    }
+
+    .card-large > video{
+        height: 500px;
+    }
+    
+    .card-small > video{
+        height: 280px;
+    }
+
+    .portfolio-button{
+        width: 350px;
+        height: 45px;
+        border-radius: 15px;
+        
+    }
+    
+    .portfolio-button > a{
+        padding: 20px 40px;
+    }
+    
+}

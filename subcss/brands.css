@@ -1,0 +1,55 @@
+
+/* BRANDS WORKED WITH */
+
+.brands{
+    overflow: hidden;
+}
+
+.brands h2{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 32px;
+}
+
+.brand-logos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.brand-logos > img{
+    height: 100px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    padding: 20px;
+}
+
+
+@keyframes scroll {
+    from{
+        transform: translateX(700px);
+    }
+
+    to{
+        transform: translateX(-600px);
+    }
+}
+
+
+@media (max-width: 700px){
+
+    .brands{
+        padding: 0;margin: 0;
+    }
+    .brands h2{
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        /* flex-wrap: nowrap; */
+    }
+}

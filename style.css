@@ -1,0 +1,201 @@
+:root{
+    --color-darkblue : #004E86;
+    --color-midblue : #0070C0;
+    --color-lightblue : #6EC3FF;
+    --color-yellow : #FFC000;
+    --color-black: #333333;
+    --color-gray: #737373;
+    --color-white: #FFFFFF;
+    --color-darkmodebg: #282C34;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+* > a {
+    text-decoration: none;
+}
+
+                                /* landingpage */
+
+
+    /*           LANDING PAGE CONTENT            */
+
+.landingpage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height:max-content ;
+    overflow: hidden;
+}
+
+.maintext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.main-txt{
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    line-height:initial;
+    text-indent: 10px;
+    top: 10px;
+    padding: 10px;
+    left:18px;
+    color: var(--color-black);
+}
+
+.auto-type::before {
+    content: "A Motion designer";
+    animation: typing 20s infinite;
+}
+ 
+.auto-type::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    background: #ffffff;
+    height: 50%;
+    /* left : 0px; */
+    border-left: 6px solid black;
+    animation: cursor 6.65s cubic-bezier(0.1, 0, 0, 1) infinite;
+}
+
+@keyframes typing{
+    0%,34%{
+        content: 'A Graphic Designer';
+    }
+    35%,67%{
+        content: 'A Motion Designer';
+    }
+    68%,100%{
+        content: 'A Web Developer';
+    }
+}
+
+@keyframes cursor{
+    from{
+        left: 0%;
+    }
+    to{
+        left: 99%;
+    }
+}
+
+.main-description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 50vw;
+    top: 5px;
+    padding: 32px 0px 10px 30px;
+    color: var(--color-gray);
+}
+
+.mainpic{
+    display: flex;
+    justify-self: right;
+    flex-wrap: wrap;
+    position: relative;
+    float:right ;
+    right: 0px;
+    padding-top: 30px;
+
+}
+
+.button{
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    width: 350px;
+    padding: 20px 10px 0px 30px;
+}
+
+#hire-button{
+    color: #ffffff;
+    background-color: var(--color-darkblue);
+    height: 50px;
+    width: 200px;
+    border: 0px;
+    border-radius: 10px;
+    margin: 5px 2px;
+}
+
+#hire-button > a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px 60px;
+}
+
+#hire-button:hover{
+    background-color: #358ecd;
+}
+
+.social-icon img{
+    width: 35px;
+    padding: 5px;
+}
+
+.social-icon{
+    display: flex;
+    margin : 20px 0px 0px 25px;
+}
+
+
+
+
+
+@media (max-width: 700px){
+
+    /* .landingpage{
+        flex-direction: column-reverse;
+    } */
+
+    .main-txt{
+        font-size: 2rem;
+    }
+
+    .main-description{
+        font-size: 0.75em;
+        width: 80%;
+        flex-wrap: wrap;
+        line-height: 20px;
+    }
+
+    #hire-button{
+        width: 85%;
+    }
+
+    .mainpic > img{
+        /* width: 400px; */
+        height: 325px;
+    }
+
+    .social-icon{
+        justify-content: center;
+    }
+
+    .social-icon > img{
+        width: 30px;
+        padding: 5px;
+    }
+
+
+}
+
+
+
+@media (min-width: 700px){
+    .main-txt{
+        font-size: 5rem;
+    }
+}

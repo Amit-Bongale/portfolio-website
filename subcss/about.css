@@ -1,0 +1,59 @@
+.Menu{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgb(40, 100, 239);
+    align-items: center;
+    font-size: 20px;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    color: white;
+    height: 30px;
+}
+
+.Menu :hover{
+    background-color: rgb(251, 49, 49);
+    border: solid white;
+    border-radius: 15px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pd{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.skills{
+    padding: 20px;
+    background-color: rgb(83, 127, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills :hover {
+    transform: translate(20px);
+    background-color: #7ddcfc;
+}
+
+.edu ,.pd ,.exp ,.skl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    width: 200px;
+    padding: 25px;
+    margin: 20px;
+}
