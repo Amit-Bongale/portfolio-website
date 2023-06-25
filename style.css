@@ -152,7 +152,58 @@
 
 
 
+@media (max-width: 1300px){
 
+    .main-txt{
+        font-size: 4rem;
+        color: #0070C0;
+    }
+
+    .main-description{
+        font-size: 0.75em;
+        line-height: 20px;
+    }
+
+    .mainpic > img{
+        height: 425px;
+    }
+
+    .social-icon > img{
+        padding:  2px 10px;
+    }
+
+}
+
+@media (max-width: 1000px){
+
+    .main-txt{
+        font-size: 2.5rem;
+        color: #00c00d;
+    }
+
+    .main-description{
+        font-size: 0.75em;
+        line-height: 20px;
+        padding-top: 16px;
+    }
+
+    .button{
+        padding: 10px 20px;
+    }
+
+    .mainpic > img{
+        height: 400px;
+    }
+
+    .social-icon{
+        margin: 6px 15px;
+    }
+
+    .social-icon > img{
+        padding: 8px;
+    }
+
+}
 
 @media (max-width: 700px){
 
@@ -161,7 +212,7 @@
     } */
 
     .main-txt{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .main-description{
@@ -174,9 +225,11 @@
     #hire-button{
         width: 85%;
     }
+    .mainpic{
+        padding-top: 10px;
+    }
 
     .mainpic > img{
-        /* width: 400px; */
         height: 325px;
     }
 
@@ -194,8 +247,47 @@
 
 
 
-@media (min-width: 700px){
-    .main-txt{
-        font-size: 5rem;
+@media (max-width: 450px){
+
+    .maintext{
+        padding: 2px;
+        margin: 0px -20px;
     }
+    .main-txt{
+        font-size: 2.2rem;
+        margin: 0;
+    }
+
+    .main-description{
+        font-size: 0.7em;
+        width: 80%;
+        flex-wrap: wrap;
+        line-height: 18px;
+        padding: 16px 30px;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+    }
+
+    #hire-button{
+        width: 96%;
+    }
+
+    .mainpic > img{
+        height: 325px;
+        padding-left: 1.5rem;
+    }
+
+    .social-icon{
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon > img{
+        width: 30px;
+        padding: 5px 10px;
+    }
+    
 }
