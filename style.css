@@ -156,7 +156,6 @@
 
     .main-txt{
         font-size: 4rem;
-        color: #0070C0;
     }
 
     .main-description{
@@ -277,7 +276,7 @@
 
     .mainpic > img{
         height: 325px;
-        padding-left: 1.5rem;
+        padding-left: 1rem;
     }
 
     .social-icon{
