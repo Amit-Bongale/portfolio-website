@@ -124,3 +124,41 @@ label{
     height: 50px;
    }
 }
+
+
+@media (max-width: 450px){
+    .contact-us > h2{
+        margin: 5px;
+    }
+    .contact-container{
+        margin: 10px;
+    }
+
+    .contact{
+        padding: 10px;
+    }
+
+    .input-bars {
+        width: 280px;
+   }
+
+   .useful-links{
+    width: 100%;
+   }
+
+   .verticalline{
+    rotate: 90deg;
+    height: 50px;
+   }
+
+   .socialmedia > h2{
+    padding: 0px 10px;
+    margin: 12px;
+    justify-content: center;
+    text-wrap: balance;
+   }
+
+   .social-images  > img {
+        width: 40px;
+    }
+}
