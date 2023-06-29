@@ -104,6 +104,7 @@ label{
 
 @media (max-width: 700px){
 
+
     .contact-us > h2{
         font-size: 1.5rem;
         display: flex;
@@ -111,8 +112,13 @@ label{
         padding: 20px;
     }
 
+    .contact{
+        padding: 15px;
+        padding-right: 220px;
+    }
+
    .input-bars {
-        width: 300px;
+        width: 400px;
    }
 
    .useful-links{
@@ -122,9 +128,11 @@ label{
    .verticalline{
     rotate: 90deg;
     height: 50px;
+    display: flex;
+    justify-content: center;
+
    }
 }
-
 
 @media (max-width: 450px){
     .contact-us > h2{
@@ -135,7 +143,8 @@ label{
     }
 
     .contact{
-        padding: 10px;
+        padding: 15px;
+        padding-right: 35px;
     }
 
     .input-bars {
@@ -149,6 +158,7 @@ label{
    .verticalline{
     rotate: 90deg;
     height: 50px;
+    align-items: center;
    }
 
    .socialmedia > h2{
