@@ -29,6 +29,10 @@
     padding: 20px;
 }
 
+.brand-logos-rev > img{
+    display: none;
+}
+
 
 @keyframes scroll {
     from{
@@ -40,6 +44,15 @@
     }
 }
 
+@keyframes scroll-right {
+    from{
+        transform: translateX(-600px);
+    }
+
+    to{
+        transform: translateX(600px);
+    }
+}
 
 @media (max-width: 700px){
 
@@ -51,5 +64,26 @@
         display: flex;
         justify-content: center;
         /* flex-wrap: nowrap; */
+    }
+
+    .brand-logos-rev > img{
+        display: block;
+    }
+
+    .brand-logos-rev{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation-name: scroll-right;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+    .brand-logos-rev > img{
+        height: 100px;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+        padding: 20px;
     }
 }
