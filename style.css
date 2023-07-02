@@ -267,8 +267,8 @@
     .button{
         display: flex;
         justify-content: center;
-        padding: 10px;
-        width: 88%;
+        padding: 20px;
+        width: 80%;
     }
 
     #hire-button{
