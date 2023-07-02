@@ -6,7 +6,6 @@
     flex-direction: column;
     background-color: var(--color-midblue);
     color: white;
-    /* height: max-content; */
 }
 
 .services > h2{
@@ -14,14 +13,14 @@
     justify-content: center;
     align-items: center;
     font-size: 42px;
-    padding: 10px;
+    padding: 15px;
+    margin: 10px;
 }
 
 .service-items{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 8px;
+    flex-wrap: wrap;    
 }
 
 .gd{
@@ -37,9 +36,36 @@
 
 .gd > img{
     border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
 }
 
+@media (max-width: 1200px){
+    .gd{
+        padding: 40px;
+        margin: 30px;
+    }
 
+    .gd > img{
+        border-radius: 35px;
+        padding: 20px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 1000px){
+    .gd{
+        padding: 40px;
+        margin: 30px;
+    }
+
+    .gd > img{
+        width: 400px;
+        border-radius: 35px;
+        padding: 20px;
+        margin: 5px;
+    }
+}
 
 @media (max-width: 700px){
     .services > h2{
