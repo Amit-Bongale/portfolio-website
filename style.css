@@ -231,8 +231,9 @@
         height: 325px;
     }
 
-    .social-icon{
-        justify-content: center;
+     .social-icon{
+        justify-content: flex-start;
+        padding: 10px;
     }
 
     .social-icon > img{
