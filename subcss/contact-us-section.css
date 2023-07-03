@@ -103,7 +103,9 @@ label{
 
 
 @media (max-width: 700px){
-
+    .contact-us{
+        overflow-x: hidden;
+    }
 
     .contact-us > h2{
         font-size: 1.5rem;
@@ -135,6 +137,10 @@ label{
 }
 
 @media (max-width: 450px){
+    .contact-us{
+        overflow-x: hidden;
+    }
+    
     .contact-us > h2{
         margin: 5px;
     }
