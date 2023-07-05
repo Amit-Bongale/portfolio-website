@@ -97,6 +97,7 @@
     top: 5px;
     padding: 32px 0px 10px 30px;
     color: var(--color-gray);
+    line-height: 24px;
 }
 
 .mainpic{
@@ -268,7 +269,7 @@
     .button{
         display: flex;
         justify-content: center;
-        padding: 20px;
+        padding: 8px 20px;
         width: 88%;
     }
 
