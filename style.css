@@ -254,8 +254,8 @@
 @media (max-width: 450px){
 
     .maintext{
-        padding: 2px;
-        margin: 0px -20px;
+        padding: 4px;
+        margin: 0px;
     }
     .main-txt{
         font-size: 2.2rem;
@@ -273,8 +273,8 @@
     .button{
         display: flex;
         justify-content: center;
-        padding: 8px 20px;
-        width: 88%;
+        padding: 4px;
+        width: 100%;
     }
 
     #hire-button{
@@ -292,8 +292,8 @@
     }
 
     .social-icon > img{
-        width: 30px;
-        padding: 5px 10px;
+        width: 40px;
+        padding: 5px;
     }
     
 }
