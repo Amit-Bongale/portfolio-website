@@ -70,13 +70,13 @@
 
 @keyframes typing{
     0%,34%{
-        content: 'A Graphic Designer';
+        content:'A Graphic Designer';
     }
     35%,67%{
-        content: 'A Motion Designer';
+        content:'A Motion Designer';
     }
     68%,100%{
-        content: 'A Web Developer';
+        content:'A Web Developer';
     }
 }
 
@@ -158,7 +158,7 @@
 
     .main-txt{
         font-size: 4rem;
-        color: #0070C0;
+        color: #000000;
     }
 
     .main-description{
@@ -254,20 +254,42 @@
 @media (max-width: 450px){
 
     .maintext{
-        padding: 4px;
+        position:relative;
         margin: 0px;
+        padding: 4px;
+        width: 92%;
+        
     }
     .main-txt{
-        font-size: 2.2rem;
-        margin: 0;
+        font-size: 2rem;
+        /* margin: 0; */
+        padding: 5px;
+        transform: translateX(-8px);
     }
+
+    .hi-txt{
+        display: flex;
+        justify-content: center;
+        color: red;
+    }
+
+    .auto-type{
+        display: flex;
+        justify-content: center;
+        color: red;
+        flex-wrap: nowrap;
+    }
+    
 
     .main-description{
         font-size: 0.7em;
-        width: 80%;
+        width: 92%;
         flex-wrap: wrap;
         line-height: 18px;
-        padding: 16px 30px;
+        padding: 30px 28px 12px 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 
     .button{
