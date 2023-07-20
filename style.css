@@ -249,7 +249,50 @@
 
 }
 
+@media (max-width: 550px){
+    .hi-txt{
+        display: flex;
+        justify-content: center;
+        /* font-size: 2rem; */
+    }
 
+    .auto-type{
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        padding: 4px;
+        width: 101%;
+    }
+
+    .main-description{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 50px;
+    }
+
+    .social-icon{
+        justify-content: center;
+        gap: 40px;
+        margin: 4px;
+        padding: 10px;
+    }
+
+    .social-icon > img{
+        width: 50px;
+        padding: 5px;
+    }
+
+    .mainpic > img{
+        height: 400px;
+        padding-left: 0.8rem;
+    }
+}
 
 @media (max-width: 450px){
 
@@ -294,7 +337,7 @@
         display: flex;
         justify-content: center;
         padding: 4px;
-        width: 100%;
+        width: 108%;
     }
 
     #hire-button{
@@ -303,7 +346,7 @@
 
     .mainpic > img{
         height: 325px;
-        padding-left: 0.6rem;
+        padding-left: 0.4rem;
     }
 
     .social-icon{
