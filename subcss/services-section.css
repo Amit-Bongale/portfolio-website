@@ -25,7 +25,7 @@
 
 .gd{
     width: 300px;
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,9 +35,16 @@
 }
 
 .gd > img{
-    border-radius: 30px;
-    padding: 20px;
+    width: 440px;
+    border-radius: 10px;
+    padding: 0px;
     margin: 5px;
+    transition: all .2s;
+}
+
+.gd > img:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 0px 30px 1px rgba(0, 234, 255, 0.411);
 }
 
 @media (max-width: 1200px){
@@ -47,8 +54,8 @@
     }
 
     .gd > img{
-        border-radius: 35px;
-        padding: 20px;
+        border-radius: 12px;
+        padding: 0px;
         margin: 5px;
     }
 }
@@ -64,12 +71,12 @@
 
     .gd > img{
         width: 400px;
-        border-radius: 35px;
-        padding: 20px;
+        border-radius: 10px;
+        padding: 0px;
         margin: 5px;
     }
     .service-items{
-        gap: -10px;
+        gap: 10px;
     }
 }
 
@@ -86,7 +93,12 @@
         margin: 0;
     }
     .gd > img{
-        width: 250px;
+        width: 350px;
         justify-content: flex-start;
     }
+
+    .service-items{
+        padding: 10px;
+    }
+
 }
