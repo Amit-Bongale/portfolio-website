@@ -1,5 +1,30 @@
+
 .contact-us{
-    background-color: var(--color-lightblue);
+    /* background-color: var(--color-lightblue); */
+
+    /* background: rgb(148, 191, 255);
+    background: linear-gradient(65deg, rgba(45,121,232,1) 0%, rgba(115,113,246,1) 24%, rgba(107,179,236,1) 71%, rgba(64,161,250,1) 98%); */
+
+    /* background-color:hsla(204,100%,71%,1);
+    background-image:
+    radial-gradient(at 53% 61%, hsla(208,100%,71%,1) 0px, transparent 50%),
+    radial-gradient(at 64% 35%, hsla(208,69%,81%,1) 0px, transparent 50%),
+    radial-gradient(at 53% 35%, hsla(216,87%,59%,1) 0px, transparent 50%),
+    radial-gradient(at 81% 63%, hsla(204,94%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 43% 77%, hsla(245,75%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 23% 24%, hsla(244,75%,70%,1) 0px, transparent 50%); */
+
+
+    background-color:#9c99ff;
+    background-image:
+    radial-gradient(at 33% 16%, rgb(65, 128, 237) 0px, transparent 50%),
+    radial-gradient(at 53% 56%, hsla(195,83%,56%,1) 0px, transparent 50%),
+    radial-gradient(at 81% 85%, hsla(202,92%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 11% 87%, hsla(201,71%,54%,1) 0px, transparent 50%),
+    radial-gradient(at 91% 21%, hsla(220,93%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 71% 20%, rgb(131, 148, 236) 0px, transparent 50%),
+    radial-gradient(at 7% 14%, rgb(52, 129, 236) 0px, transparent 50%);
+
     display: flex;
     flex-direction: column;
 }
@@ -9,6 +34,7 @@
     justify-content: center;
     padding: 10px;
     font-size: 32px;
+    color: white;
 }
 
 .contact{
@@ -21,6 +47,7 @@
 
 label{
     padding: 20px 5px 5px 2px;
+    color: white;
 }
 
 .input-bars{
@@ -40,9 +67,21 @@ label{
     margin: 20px 5px;
     justify-self: center;
     color:var(--color-black);
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 16px;
     background-color: white;
+    border: none;
+}
+
+.submit-button:hover {
+    color: #ffffff;
+    background-color: #4d47fd;
+    border: none;
+    text-shadow: 0 0 5px #ffffff,
+                0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff,
+                0 0 20px #008cff,
+                0 0 800px #008cff;
 }
 
 .contact-container{
@@ -52,38 +91,58 @@ label{
     margin: 20px;
 }
 
+/*  */
+
 .verticalline {
     height: 500px;
-    border: 1.5px solid black;
+    border: 1.5px solid white;
 }
 
 .useful-links{
     display: flex;
     flex-direction: column;
     position: relative;
+    color: white;
 }
 
 .useful-links > a{
-    color: black;
+    color: white;
     font-size: 20px;
     padding: 6px;
 }
 
 /*  */
 
+.details > h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
 .cont-details{
     display: flex;
     padding: 5px;
 }
+
 .contact-icons{
     padding: 5px;
     width: 26px;
     height: 26px;
 }
 
-.social-images img{
+.social-images{
+    padding: 5px 40px;
+}
+
+.social-images > img{
     width: 45px;
-    padding: 10px;
+    padding: 5px;
+}
+
+.social-images > img:hover{
+    opacity: 50%;
 }
 
 .socialmedia h3{
@@ -91,6 +150,7 @@ label{
     justify-content: center;
     margin: 0;
     padding: 5px;
+    color: white;
 }
 
 #Logo{
@@ -98,6 +158,7 @@ label{
     margin: -20px; 
     padding: -200px;
 }
+
 @media (max-width: 1020px){
     .socialmedia{
         display: flex;
