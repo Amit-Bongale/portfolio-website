@@ -313,7 +313,7 @@
         
     }
     .main-txt{
-        font-size: 2rem;
+        font-size: 2.1rem;
         /* margin: 0; */
         padding: 5px;
         transform: translateX(-8px);
@@ -336,7 +336,7 @@
         width: 100%;
         flex-wrap: wrap;
         line-height: 18px;
-        padding: 18px 28px 12px 15px;
+        padding: 18px 10px 12px 10px;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -359,10 +359,12 @@
     }
 
     .social-icon{
+        display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 8px;
         margin: 4px;
         padding: 4px;
+        padding-left: 40px;
     }
 
     .social-icon > img{
