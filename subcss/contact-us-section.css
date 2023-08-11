@@ -109,6 +109,14 @@ label{
     color: white;
     font-size: 20px;
     padding: 6px;
+    margin: 6px;
+    opacity: 80%;
+    width: fit-content;
+}
+
+.useful-links > a:hover{
+    opacity: 100%;
+    border-bottom: 0.5px solid white;
 }
 
 /*  */
@@ -136,13 +144,13 @@ label{
     padding: 5px 40px;
 }
 
-.social-images > img{
+.social-images > a > img{
     width: 45px;
     padding: 5px;
 }
 
-.social-images > img:hover{
-    opacity: 50%;
+.social-images > a > img:hover{
+    opacity: 80%;
 }
 
 .socialmedia h3{
@@ -258,7 +266,7 @@ label{
        margin-top: -8px;
     }
 
-   .social-images  > img {
+   .social-images > a > img {
         width: 40px;
     }
 
