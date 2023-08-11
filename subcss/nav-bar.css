@@ -1,4 +1,3 @@
-
 /*          NAVIGATION BAR          */
 
 nav{
@@ -15,7 +14,6 @@ nav{
   color: white;
   height:70px;
   overflow: hidden;
-
 }
 
 a > img{
@@ -111,15 +109,15 @@ a > img{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   transition-duration: .5s;
-  padding: 2px 39px 1px 25px;
+  padding: 2px 30px 1px 25px;
 }
 
 
 .bars {
   width: 100%;
-  height: 4px;
+  height: 3.5px;
   background-color: rgb(255, 255, 255);
   border-radius: 6px;
 }
@@ -128,9 +126,9 @@ a > img{
   transition-duration: .8s;
 }
 
-#bar4,#bar6 {
+/* #bar4,#bar6 {
   width: 80%;
-}
+} */
 
 #checkbox2:checked + .toggle2 .bars {
   position: absolute;
