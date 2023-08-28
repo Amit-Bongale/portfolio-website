@@ -5,49 +5,244 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about me</title>
-    <link rel="stylesheet" href="./subcss/about.css">
+
+    <!-- CSS  style sheets-->
+    <link rel="stylesheet" href="./subcss/intro-annimation.css"> <!-- Intro -->
+    <link rel="stylesheet" href="./style.css"> <!-- main Sheet -->
+    <link rel="stylesheet" href="./subcss/about.css"> <!-- About page -->
+    <link rel="stylesheet" href="./subcss/nav-bar.css">  <!-- nav-bar -->
+    <link rel="stylesheet" href="./subcss/experience.css"> <!-- exp,edu,skills -->
+    <link rel="stylesheet" href="./subcss/contact-us-section.css">  <!--Contact-us- section-->
+    <link rel="stylesheet" href="./subcss/footer.css"> <!-- footer-section-->
+
 </head>
-
-<nav>
-    <div class="Menu">
-        <div> <a href="/index.html">Home</a> </div>
-        <div> Portfolio </div>
-        <div><a href="/subpage/about.html"> About</a></div>
-        <div> <a href="/subpage/contact.html"> Contact us </a> </div>
-    </div>
-</nav>
-
 <body>
-    <H1> Personal Details </H1>
-    <hr>
-    <div class="pd">
-         NAME :  AMIT.NARAHARI.BONGALE <br>
-         age :  20 <br>
-         Mobile no :  6364133474 <br>
-         Email : amitbongale14@gmail.com <br>
-         ADRESS : Vivekanada nagar 4th main cross, Hirekerur
 
+    <div class="intro-slide-main">
+        <h1 class="intro-slide-text">Hello</h1>
     </div>
 
-    <div class="skills">
-           
-        <div class="edu">
-            <a href="/subpage/education.html"> <img src="/img/education.png" width="100"> <br>  Education </a> 
+    <header>
+        <nav>
+            <a href="index.html"><img src="/img/logowhite.png" alt="logo"></a>
+            <div class="Menu">
+                <a href="./index.html">Home</a>
+                <a href="./subpage/portfolio.html">Portfolio</a>
+                <a href="./subpage/about.html"> About</a>
+                <a href="#contact-us-sec">Contact us</a>
+            </div>
+
+            <div class="menu-icon">
+                <input id="checkbox2" type="checkbox">
+                <label class="toggle toggle2" for="checkbox2">
+                    <div id="bar4" class="bars"></div>
+                    <div id="bar5" class="bars"></div>
+                    <div id="bar6" class="bars"></div>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!--                     LANDING PAGE                        -->
+
+        <div class="landingpage">
+
+            <div class="maintext">
+                <div class="main-txt">
+                    <span class="hi-txt">I'm AMITH </span>
+                </div>
+
+                <div class="main-description">
+                    An Engineering student and a passionate Motion graphic designer. Currently studying, Computer Science Engineering at STJ Institute of Technology,  Ranebennur. I thrive on solving complex engineering problems while infusing artistic life into visuals. By merging my analytical skills with a creative eye, I bring a unique perspective to both fields. Let's collaborate and transform ideas into captivating experiences.
+                </div>
+                
+                <div class="abt-buttons">
+                    <span class="button">
+                        <button id="hire-button">
+                            <a href="#contact-us-sec" class="hir"> Hire Me </a>
+                        </button>
+                    </span>
+
+                    <span class="button">
+                        <button id="resume-button">
+                            Get my Resume
+                        </button>
+                    </span>
+                </div>
+
+                <div class="social-icon">
+                    <img src="./img/socaialMedia/github.png" alt="github">
+                    <img src="./img/socaialMedia/instagram.png" alt="instagram">
+                    <img src="./img/socaialMedia/gmail.png" alt="Gmail">
+                    <img src="./img/socaialMedia/linkedin.png" alt="LinkedIn">
+                </div>
+            </div>
+
+
+            <div class="mainpic">
+                <img  src="./img/about/web about -main copy 2.png" height="550rem">
+            </div>
+
         </div>
 
-        <div class="pd"> 
-            <a  href="/subpage/about.html">  <img src="/img/cv.png" width="100"><br> Personal details</a>
+
+        <!-- Experience Section -->
+
+        <div class="services"  style="background-color: white; color: black;">
+
+            <h2>My Work Experience</h2>
+
+            <div class="service-items">
+
+                <div class="gd"  >
+                    <img src="./img/Experiance/digiphins-exp.png" alt="Digiphins">
+                </div>
+
+                <div class="gd">
+                    <img src="./img/Experiance/fs-exp.png" alt="Filmyscoop">
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="exp">
-            <a  href="/subpage/work.html"> <img src="/img/certificate.png" width=" 100"> <br> Experience </a>
+
+        <!-- Skills Section -->
+                
+        <div class="services">
+
+            <h2>My Skills</h2>
+
+            <div class="service-items">
+
+                <div class=" ">
+                    <H2>Coding Languages:</H2> <P> C , C++, Java , Python </P> 
+                    <h2> Web development : </h2> <p> HTML, CSS, JavaScript</p> 
+                    <h2>Code Editors : </h2> <P> VS code , Developer C++, Neatbeans</P> 
+                </div>
+
+                <div class=" ">
+                    <h2>Designing:</h2> 
+                    <pre> web design, Grapic design, annimation</pre>
+                    <H2> Design tools:</H2>
+                    <p> Photoshop , aftereffects , Figma , PrimerPro, Illustrator </p>
+                    <h2> MS office: </h2> <P> World, Powerpoint, Excel </P>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="skl">
-            <a  href="/subpage/skills.html"> <img src="/img/skills.png" width="100"> <br> skills </a> 
+
+        <!-- Education -->
+
+        <div class="services"  style="background-color: white; color: black;">
+
+            <h2>Education</h2>
+
+            <div class="service-items">
+
+                <div class="gd"  >
+                    <img src="./img/edu/clg.jpg" alt="STJIT">
+                    
+                </div>
+
+                <div class="gd">
+                    <img src="./img/edu/pu.jpg" alt="KH Patil">
+                </div>
+
+                <div class="gd">
+                    <img src="./img/edu/school.jpg" alt="St mary's">
+                </div>
+
+            </div>
+
         </div>
-        
-    </div>
+
+        <!--                          CONTACT US                             -->
+
+        <div class="contact-us" id="contact-us-sec">
+            <h2> Contact us</h2>
+
+            <div class="contact-container">
+
+                <form action="#" class="contact" id="submit">  
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="input-bars">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"  class="input-bars">
+                    <label for="mobile-no">Mobile Number</label>
+                    <input type="number" name="mobile-no" id="mobile-no" class="input-bars">
+                    <label for="dispcription">Discription</label>
+                    <input type="text" id="dispcription" class="input-bars">
+                    <input type="submit" value="Send" class="submit-button">
+                </form>
+                
+                <script src="./js/mail.js"></script>
+
+
+                <!-- <hr class="verticalline"> -->
+                <div class="verticalline"></div>
+
+                <div class="useful-links">
+                    <h2> Some Useful links </h2>
+                    <a href="./index.html">Home</a>
+                    <a href="./subpage/portfolio.html">Portfolio</a>
+                    <a href="./subpage/about.html"> About</a>
+                </div>
+                
+                <div class="verticalline"></div>
+                
+                <div class="socialmedia">
+                    <a href="index.html"><img id="Logo" src="./img/logowhite.png" alt="LOGO"></a>
+                    <div class="details">
+                        <div class="cont-details">
+                            <img class="contact-icons" src="./img/icons/location-white.png" alt="loc:">
+                            <h3>Hirekerur,Karnataka,india</h3>
+                        </div>
+                        <div class="cont-details">
+                            <img class="contact-icons" src="./img/icons/phone-call-white.png" alt="ph:">
+                            <h3>+91 636413347</h3>
+                        </div>
+                        <div class="cont-details">
+                            <img  class="contact-icons" src="./img/icons/mail-white.png" alt="mail:">
+                            <h3>amitbongale14@gmail.com</h3>
+                        </div>
+                        
+                        <h2>Reach me out on</h2>
+                        <div class="social-images">
+                            <a href="https://github.com/Amit-Bongale">
+                                <img src="/img/socaialMedia/github-white.png" alt="github">
+                            </a>
+                            <a href="http://">
+                                <img src="/img/socaialMedia/instagram-white.png" alt="instagram">
+                            </a>
+                            <a href="www.amitbongale14@gmail.com">
+                                <img src="/img/socaialMedia/gmail-white.png" alt="Gmail">
+                            </a>
+                            <a href="http://">
+                                <img src="/img/socaialMedia/linkedin-white.png" alt="LinkedIn">
+                            </a>
+                            
+                        </div>
+                        
+                    </div>
+                 
+                    
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="copyrights">
+            &copy All Rights Reserverd || Design and Developed by Amit
+        </div>
+    </footer>
 
     
 </body>
