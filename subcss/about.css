@@ -1,59 +1,55 @@
-.Menu{
+:root{
+    --color-darkblue : #004E86;
+    --color-midblue : #0070C0;
+    --color-lightblue : #6EC3FF;
+    --color-yellow : #FFC000;
+    --color-black: #333333;
+    --color-gray: #737373;
+    --color-white: #FFFFFF;
+    --color-darkmodebg: #282C34;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+* > a {
+    text-decoration: none;
+}
+
+
+.abt-buttons{
     display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    background-color: rgb(40, 100, 239);
-    align-items: center;
-    font-size: 20px;
-    padding: 20px;
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-    color: white;
-    height: 30px;
 }
 
-.Menu :hover{
-    background-color: rgb(251, 49, 49);
-    border: solid white;
-    border-radius: 15px;
-}
-
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pd{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.skills{
-    padding: 20px;
-    background-color: rgb(83, 127, 231);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.skills :hover {
-    transform: translate(20px);
-    background-color: #7ddcfc;
-}
-
-.edu ,.pd ,.exp ,.skl{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: azure;
+#resume-button{
+    color: var(--color-darkblue);
+    height: 50px;
     width: 200px;
-    padding: 25px;
-    margin: 20px;
+    border: 3px solid var(--color-darkblue);
+    border-radius: 10px;
+    margin: 5px 2px;
+    transition: 300ms;
+    background-color: white;
+}
+
+#resume-button:hover{
+    background-color: #008cff;
+    color: #ffffff;
+    box-shadow: 0 0 5px #0f8cf3,
+                0 0 20px #008cff,
+                0 0 100px #0676d1;
+
+    border: 0px;
+}
+
+
+@media (max-width: 450px){
+    #resume-button{
+        width: 90%;
+    }
+}
+
+.gd > img:hover {
+    transform: scale(1.04);
 }
