@@ -36,16 +36,22 @@
     <!-- Monsart font -->
 
     <!-- Script files -->
-     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> <!-- mailer -->
+
+    <!-- greensock js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/js/index-annimation.js" defer></script>
     
 </head> 
 
 <body>
-
+    
+    <script src="/js/nav.js"></script> <!-- navbar js -->
     <header>
         <nav>
             <a href="index.html"><img src="./img/logowhite.png" alt="logo"></a>
-            <div class="Menu">
+            <div id="nav-toggle" class="Menu visility-false">
                 <a href="./index.html">Home</a>
                 <a href="./subpage/portfolio.html">Portfolio</a>
                 <a href="./subpage/about.html"> About</a>
@@ -247,10 +253,7 @@
             <h2> Here's What People say About us </h2>
 
             <div class="ppl-testimonial">
-                <div class="testimonial-content"> <img src="./img/testimonial/yellow.png" alt=""></div>
-                <div class="testimonial-content"> <img src="./img/testimonial/yellow.png" alt=""></div>
-                <div class="testimonial-content"> <img src="./img/testimonial/yellow.png" alt=""></div>
-                <div class="testimonial-content"> <img src="./img/testimonial/yellow.png" alt=""></div>
+                <div class="testimonial-content"> <img src="/img/testimonial/hemath.png" alt="" width="600px"></div>
             </div>
 
         </div>
