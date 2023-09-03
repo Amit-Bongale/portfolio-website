@@ -15,9 +15,12 @@
 }
 .ppl-testimonial{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
-    padding: 10px;
+    padding: 0px;
+}
+.ppl-testimonial > img{
+    overflow: hidden;
 }
 
 /* .testimonial-content{
@@ -30,6 +33,24 @@
 
 
 @media (max-width: 700px){
+
+    .testimonial > h2{
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .ppl-testimonial{
+        padding: 0;
+    }
+
+    .testimonial-content > img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 400px){
 
     .testimonial > h2{
         font-size: 1.5rem;
