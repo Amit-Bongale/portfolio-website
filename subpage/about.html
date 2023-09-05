@@ -22,10 +22,12 @@
         <h1 class="intro-slide-text">Hello</h1>
     </div>
 
-    <header>
+    <script src="/js/nav.js"></script> <!-- navbar js -->
+    <header class="head">
         <nav>
-            <a href="index.html"><img src="/img/logowhite.png" alt="logo"></a>
-            <div class="Menu">
+            
+            <a href="index.html"> <img src="/img/logowhite.png" alt="logo"></a>
+            <div id="nav-toggle" class="Menu visility-false">
                 <a href="/index.html">Home</a>
                 <a href="/subpage/portfolio.html">Portfolio</a>
                 <a href="/subpage/about.html"> About</a>
@@ -33,7 +35,7 @@
             </div>
 
             <div class="menu-icon">
-                <input id="checkbox2" type="checkbox">
+                <input id="checkbox2" type="checkbox" onclick="myfunction()">
                 <label class="toggle toggle2" for="checkbox2">
                     <div id="bar4" class="bars"></div>
                     <div id="bar5" class="bars"></div>
@@ -243,7 +245,6 @@
             &copy All Rights Reserverd || Design and Developed by Amit
         </div>
     </footer>
-
     
 </body>
 </html>
