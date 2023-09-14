@@ -10,7 +10,7 @@
     <meta property="og:title" content="Amith Bongale">
     <meta property="og:description" content="Graphic Design | Motion Graphic Design | Web Development">
     <meta property="og:image" content="https://i.ibb.co/7S5hd1R/logo-bg-black.jpg">
-    <meta property="og:url" content="https://amit-bongale.github.io/portfolio-website/">
+    <meta property="og:url" content="https://www.amithbongale.in/">
     <meta property="og:site_name" content="Amith Bongale">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_UK">
@@ -28,40 +28,38 @@
     <link rel="stylesheet" href="./subcss/footer.css"> <!-- footer-section-->
 
 
-
     <!-- monsart fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;300;500;700&display=swap" rel="stylesheet">
     <!-- Monsart font -->
 
+    
     <!-- Script files -->
     <script src="https://smtpjs.com/v3/smtp.js"></script> <!-- mailer -->
 
     <!-- greensock js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="./js/index-annimation.js" defer></script>
+    <script src="/js/index-annimation.js" defer></script>
 
-    
-    
 </head> 
 
 <body>
-    
-    <script src="./js/nav.js"></script> <!-- navbar js -->
-    <header class="head">
-        <nav>
-            <a href="index.html"> <img src="/img/logowhite.png" alt="logo"></a>
+    <script src="/js/nav.js"></script>  <!-- navbar js -->
+    <header class="head overflow">
+        <nav>       
+            <a href="index.html"> <img src="./img/logowhite.png" alt="logo"></a>
             <div id="nav-toggle" class="Menu visility-false">
-                <a href="/index.html">Home</a>
-                <a href="/subpage/portfolio.html">Portfolio</a>
-                <a href="/subpage/about.html"> About</a>
+                <a href="./index.html">Home</a>
+                <a href="./subpage/portfolio.html">Portfolio</a>
+                <a href="./subpage/about.html"> About</a>
                 <a href="#contact-us-sec">Contact us</a>
             </div>
 
             <div class="menu-icon">
-                <input id="checkbox2" type="checkbox" onclick="myfunction()">
+                <input id="checkbox2" type="checkbox">  
+                <!-- onclick="myfunction()" -->
                 <label class="toggle toggle2" for="checkbox2">
                     <div id="bar4" class="bars"></div>
                     <div id="bar5" class="bars"></div>
@@ -81,18 +79,6 @@
             <div class="maintext">
                 <div class="main-txt">
                     <span class="hi-txt">Hi,I'm AMIT </span><span class="auto-type"> </span>
-
-                    <!-- <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-                    <script>
-                        var typed = new Typed(".auto-type", {
-                            strings: ["A graphic designer", "A Motion Designer", "web developer"],
-                            typeSpeed: 350,
-                            backSpeed: 450,
-                            loop: true
-                        })
-                        
-                    </script> -->
                 </div>
 
                 <div class="main-description">
@@ -106,20 +92,24 @@
                 </span>
 
                 <div class="social-icon">
-                    <img src="./img/socaialMedia/github.png" alt="github">
-                    <img src="./img/socaialMedia/instagram.png" alt="instagram">
-                    <img src="./img/socaialMedia/gmail.png" alt="Gmail">
-                    <img src="./img/socaialMedia/linkedin.png" alt="LinkedIn">
+                    <a href="https://github.com/Amit-Bongale">
+                        <img src="./img/socaialMedia/github-white.png" alt="github">
+                    </a>
+                    <a href="https://www.instagram.com/amit_edits_7/">
+                        <img src="./img/socaialMedia/instagram-white.png" alt="instagram">
+                    </a>
+                    <a href="mailto:amitbongale14@gmail.com">
+                        <img src="./img/socaialMedia/gmail-white.png" alt="Gmail">
+                    </a>
+                    <a href="https://www.linkedin.com/in/amit-bongale-8762b4283/">
+                        <img src="./img/socaialMedia/linkedin-white.png" alt="LinkedIn">
+                    </a>
                 </div>
             </div>
   
-
             <div class="mainpic">
-                <!-- <img  src="./img/pic.png" height="550rem"> -->
-                <img  src="./img/pic-2.png" height="550rem">
+                <img src="./img/pic-2.png" height="550rem">
             </div>
-
-           
 
         </div>
 
@@ -222,6 +212,12 @@
                     <video  controls>
                         <source src="./videos/7-2 SUFH South Indian Meal.mp4" type="video/mp4">
                     </video>
+
+                    <!-- <iframe src="https://player.vimeo.com/video/853968693?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="7-2 SUFH South Indian Meal"></iframe>
+
+                    <script src="https://player.vimeo.com/api/player.js"></script> -->
+                    <!-- <iframe src="https://player.vimeo.com/video/853968693?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1080" height="1920" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="7-2 SUFH South Indian Meal"></iframe> -->
+
                 </div>
                 <div class="card-large">
                     <video  controls>
@@ -238,14 +234,14 @@
                         <source src="./videos/27-3 egg cury.mp4" type="video/mp4">
                     </video>
             </div>
-
+        
         </div>
 
-            <div class="btn">
-                <div class="portfolio-button">
-                    <a href="./subpage/portfolio.html">SEE MORE</a>
-                </div>
+        <div class="btn">
+            <div class="portfolio-button">
+                <a href="./subpage/portfolio.html">SEE MORE</a>
             </div>
+        </div>
 
 
         <!--                        TESTIMONIAL                         -->
@@ -255,7 +251,9 @@
             <h2> Here's What People say About us </h2>
 
             <div class="ppl-testimonial">
-                <div class="testimonial-content"> <img src="/img/testimonial/hemath.png" alt="" width="600px"></div>
+                <div class="testimonial-content"> <img src="./img/testimonial/hemath.png" alt="" width="600px"></div>
+                <!-- <div class="testimonial-content"> <img src="./img/testimonial/hemath.png" alt="" width="600px"></div> -->
+                <!-- <div class="testimonial-content"> <img src="./img/testimonial/yellow.png" alt=""></div> -->
             </div>
 
         </div>
@@ -264,10 +262,9 @@
         <!--                          CONTACT US                             -->
 
         <div class="contact-us" id="contact-us-sec">
+
             <h2> Contact us</h2>
             <div class="contact-container">
-                
-                <!--" onsubmit="sendEmail(); reset(); return false " -->
 
                 <form action="#" class="contact" id="submit">  
                     <label for="name">Name</label>
@@ -283,8 +280,6 @@
                 
                 <script src="./js/mail.js"></script>
 
-                
-                <!-- <hr class="verticalline"> -->
                 <div class="verticalline"></div>
 
                 <div class="useful-links">
@@ -295,7 +290,6 @@
                 </div>
                 
                 <div class="verticalline"></div>
-                <!-- <hr class="verticalline"> -->
                 
                 <div class="socialmedia">
                     <a href="index.html"><img id="Logo" src="./img/logowhite.png" alt="LOGO"></a>
@@ -315,19 +309,28 @@
                         
                         <h2>Reach me out on</h2>
                         <div class="social-images">
-                            <a><img src="./img/socaialMedia/github-white.png" alt="github"></a>
-                            <a><img src="./img/socaialMedia/instagram-white.png" alt="instagram"></a>
-                            <a><img src="./img/socaialMedia/gmail-white.png" alt="Gmail"></a>
-                            <a><img src="./img/socaialMedia/linkedin-white.png" alt="LinkedIn"></a>
+                            <a href="https://github.com/Amit-Bongale">
+                                <img src="./img/socaialMedia/github-white.png" alt="github">
+                            </a>
+                            <a href="https://www.instagram.com/amit_edits_7/">
+                                <img src="./img/socaialMedia/instagram-white.png" alt="instagram">
+                            </a>
+                            <a href="mailto:amitbongale14@gmail.com">
+                                <img src="./img/socaialMedia/gmail-white.png" alt="Gmail">
+                            </a>
+                            <a href="https://www.linkedin.com/in/amit-bongale-8762b4283/">
+                                <img src="./img/socaialMedia/linkedin-white.png" alt="LinkedIn">
+                            </a>
+                            
                         </div>
                         
                     </div>
-                 
-                    
-                </div>
-            </div>
-        </div>
 
+                </div>
+
+            </div>
+            
+        </div>
 
     </main>
 
@@ -339,5 +342,6 @@
             &copy All Rights Reserverd || Design and Developed by Amit
         </div>
     </footer>
+
 </body>
 </html>
