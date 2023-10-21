@@ -2,7 +2,7 @@
 .portfolio{
     display: flex;
     flex-direction: column;
-    background-color: var(--color-yellow);
+    background-color: var(--color-yellow); 
 }
 
 .portfolio > h2{
@@ -28,6 +28,7 @@
     align-items: center;
     padding: 10px;
     grid-row-end: span 10;
+    position: relative;
 }
 
 .card-small{
@@ -36,9 +37,16 @@
     align-items: center;
     padding: 10px;
     grid-row-end: span 6;
+    position: relative;
 }
 
 .card-large > video{
+    height: 600px;
+    border-radius: 12px;
+    z-index: 5;
+}
+
+.card-large > iframe{
     height: 600px;
     border-radius: 12px;
 }
@@ -46,12 +54,14 @@
 .card-small > video{
     height: 340px;
     border-radius: 12px;
+    z-index: 8;
 }
 
 .btn{
     display: flex;
     justify-content: center;
-    padding: 25px;
+    align-items: center;
+    padding: 20px;
     margin: 20px 0px;
 }
 
@@ -75,6 +85,48 @@
 .portfolio-button:hover{
     background-color: #edf8ff;
 }
+
+
+/* skeleton */
+
+.skeleton, .loading-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.skeleton {
+    background: #f1e6e6; /* Placeholder background color */
+    width: fit-content;
+    animation: blinker infinite;
+}
+
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    animation: blinker 2s ease-in-out infinite;
+}
+
+video {
+    display: none; /* Initially hide the video element */
+}
+
+@keyframes blinker {
+    0%,34%{
+        opacity: 50%;
+    }
+    35%,67%{
+        opacity: 80%;
+    }
+    51%,100%{
+        opacity: 50%;
+    }
+}
+
 
 @media (max-width: 700px){
 
