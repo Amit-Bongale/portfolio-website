@@ -13,10 +13,11 @@
     <meta property="og:url" content="https://www.amithbongale.in/">
     <meta property="og:site_name" content="Amith Bongale">
     <meta property="og:type" content="website">
+    
     <meta property="og:locale" content="en_UK">
     <!-- og tag end -->
 
-
+    
     <!-- CSS  style sheets-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./subcss/nav-bar.css">  <!-- nav-bar -->
@@ -26,6 +27,7 @@
     <link rel="stylesheet" href="./subcss/testimonial-section.css"> <!--testimonial- section-->
     <link rel="stylesheet" href="./subcss/contact-us-section.css">  <!--Contact-us- section-->
     <link rel="stylesheet" href="./subcss/footer.css"> <!-- footer-section-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">  <!-- locomotive-->
 
 
     <!-- monsart fonts -->
@@ -45,7 +47,7 @@
 
 </head> 
 
-<body>
+<body id="main">
     <script src="/js/nav.js"></script>  <!-- navbar js -->
     <header class="head overflow">
         <nav>       
@@ -58,7 +60,7 @@
             </div>
 
             <div class="menu-icon">
-                <input id="checkbox2" type="checkbox" onclick="myfunction()">
+                <input id="checkbox2" type="checkbox" onclick="myfunction()">  
                 <label class="toggle toggle2" for="checkbox2">
                     <div id="bar4" class="bars"></div>
                     <div id="bar5" class="bars"></div>
@@ -69,7 +71,7 @@
     </header>
 
 
-    <main>
+    <main >
 
         <!--                     LANDING PAGE                        -->
 
@@ -116,6 +118,8 @@
         <!--                    SERVICES                             -->
 
         <div class="services">
+
+            <div class="cursor"> </div>
 
             <h2>Services That I Offer</h2>
 
@@ -187,59 +191,61 @@
             <h2> Here are some of my Works</h2>
  
             <div class="my-works">
-                <div class="card-large">
-                    <video controls>
-                        <source src="./videos/28-7 chicken curry_1.mp4" type="video/mp4">
-                    </video>
+                <div class="card-large" height="600px">
+                    <div class="skeleton"></div>
+                    <div class="loading-indicator">Loading...</div>
+                    <video  src="./videos/28-7 chicken curry_1.mp4" controls loading="lazy"></video>
                 </div>
+
                 <div class="card-small">
-                    <video  controls>
-                        <source src="./videos/7-4 packers 2.mp4" type="video/mp4">
-                    </video>
+                    <div class="skeleton"></div>
+                    <div class="loading-indicator">Loading...</div>
+                    <video src="./videos/7-4 packers 2.mp4" controls loading="lazy"> </video>
                 </div>
+
                 <div class="card-large"> 
-                    <video  controls>
-                        <source src="./videos/7-5 fru'd -chicken wrap.mp4" type="video/mp4">
-                    </video>
+                    <div class="skeleton"></div>
+                    <div class="loading-indicator">Loading...</div>
+                    <video  src="./videos/7-5 fru'd -chicken wrap.mp4" controls  loading="lazy"></video>
                 </div>
-                <div class="card-small">
-                    <video  controls>
-                        <source src="./videos/13-12 otr happy hours.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="card-large">
-                    <video  controls>
-                        <source src="./videos/7-2 SUFH South Indian Meal.mp4" type="video/mp4">
-                    </video>
 
-                    <!-- <iframe src="https://player.vimeo.com/video/853968693?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="7-2 SUFH South Indian Meal"></iframe>
+                <div class="card-small" loading="lazy">
+                    <div class="skeleton"></div>
+                    <div class="loading-indicator">Loading...</div>
+                    <video src="./videos/13-12 otr happy hours.mp4" controls></video>
+                </div>
 
-                    <script src="https://player.vimeo.com/api/player.js"></script> -->
-                    <!-- <iframe src="https://player.vimeo.com/video/853968693?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1080" height="1920" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="7-2 SUFH South Indian Meal"></iframe> -->
+                <div class="card-large" loading="lazy">
+                    <div class="skeleton"></div>
+                    <div class="loading-indicator">Loading...</div>
+                    <video src="./videos/7-2 SUFH South Indian Meal.mp4" controls> </video>
+                </div>
 
+                <div class="card-large" loading="lazy">
+                    <div class="skeleton"></div>
+                    <div class="loading-indicator">Loading...</div>
+                    <video src="./videos/11-12 sufh bhel puri_2.mp4" controls></video>
                 </div>
-                <div class="card-large">
-                    <video  controls>
-                        <source src="./videos/11-12 sufh bhel puri_2.mp4" type="video/mp4">
-                    </video>
+                <div class="card-small" loading="lazy">
+                    <div class="skeleton"></div>
+                    <div class="loading-indicator">Loading...</div>
+                    <video src="./videos/14-1 Wunderfit Business Consultant.mp4" controls> </video>
                 </div>
-                <div class="card-small">
-                    <video  controls>
-                        <source src="./videos/14-1 Wunderfit Business Consultant.mp4" type="video/mp4">
-                    </video>
+
+                <div class="card-small" loading="lazy">
+                    <div class="skeleton"></div>
+                    <div class="loading-indicator">Loading...</div>
+                    <video src="./videos/27-3 egg cury.mp4" controls> </video>
                 </div>
-                <div class="card-small">
-                    <video  controls>
-                        <source src="./videos/27-3 egg cury.mp4" type="video/mp4">
-                    </video>
+
             </div>
-        
-        </div>
 
-        <div class="btn">
-            <div class="portfolio-button">
-                <a href="./subpage/portfolio.html">SEE MORE</a>
+            <div class="btn">
+                <div class="portfolio-button">
+                    <a href="https://www.instagram.com/amit_edits_7/">SEE MORE</a>
+                </div>
             </div>
+
         </div>
 
 
@@ -341,6 +347,13 @@
             &copy All Rights Reserverd || Design and Developed by Amit
         </div>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- LOCOMOTIVE JS -->
+    <script src="/js/locomotive-portfolio.js"></script>
+    <script src="/js/cursor.js"></script>
+
 
 </body>
 </html>
