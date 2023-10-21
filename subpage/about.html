@@ -10,20 +10,22 @@
     <link rel="stylesheet" href="/subcss/intro-annimation.css"> <!-- Intro -->
     <link rel="stylesheet" href="/style.css"> <!-- main Sheet -->
     <link rel="stylesheet" href="/subcss/about.css"> <!-- About page -->
-    <link rel="stylesheet" href="/subcss/nav-bar.css">  <!-- nav-bar -->
-    <link rel="stylesheet" href="/subcss/experience.css"> <!-- exp,edu,skills -->
+    <link rel="stylesheet" href="/subcss/nav-bar.css">  <!-- nav-bar -->  
+    <link rel="stylesheet" href="/subcss/experience.css"> <!-- exp,edu -->
     <link rel="stylesheet" href="/subcss/contact-us-section.css">  <!--Contact-us- section-->
     <link rel="stylesheet" href="/subcss/footer.css"> <!-- footer-section-->
 
+
+    
 </head>
 
 <body>
 
-    <div class="intro-slide-main">
+    <!-- <div class="intro-slide-main">
         <h1 class="intro-slide-text">Hello</h1>
-    </div>
+    </div> -->
 
-    <script src="/js/nav.js"></script> <!-- navbar js -->
+
     <header class="head">
         <nav>
             <a href="index.html"> <img src="/img/logowhite.png" alt="logo"></a>
@@ -121,26 +123,53 @@
 
         <!-- Skills Section -->
                 
-        <div class="services">
+        <div class="Skills-section">
 
-            <h2>My Skills</h2>
+            <h2>Things I Know</h2>
 
-            <div class="service-items">
+            <div class="skills">
 
-                <div class=" ">
-                    <H2>Coding Languages:</H2> <P> C , C++, Java , Python </P> 
-                    <h2> Web development : </h2> <p> HTML, CSS, JavaScript</p> 
-                    <h2>Code Editors : </h2> <P> VS code , Developer C++, Neatbeans</P> 
+                <div class="skill-itm">
+                    <img src="/img/app icons/photoshop.png" alt="photoshop">
+                    <h4> Photoshop</h4>
                 </div>
-
-                <div class=" ">
-                    <h2>Designing:</h2> 
-                    <pre> web design, Grapic design, annimation</pre>
-                    <H2> Design tools:</H2>
-                    <p> Photoshop , aftereffects , Figma , PrimerPro, Illustrator </p>
-                    <h2> MS office: </h2> <P> World, Powerpoint, Excel </P>
+                <div class="skill-itm">
+                    <img src="/img/app icons/after-effects.png" alt=" After Effects">
+                    <h4> After Effects</h4>
                 </div>
-
+                <div class="skill-itm">
+                    <img src="/img/app icons/premiere-pro.png" alt="Primer Pro">
+                    <h4> Primer Pro</h4>
+                </div>
+                <div class="skill-itm">
+                    <img src="/img/app icons/figma.png" alt=" Figma">
+                    <h4> Figma</h4>
+                </div>
+                <div class="skill-itm">
+                    <img src="/img/app icons/html-5.png" alt="HTML">
+                    <h4> HTML </h4>
+                </div>
+                <div class="skill-itm">
+                    <img src="/img/app icons/css-3.png" alt="CSS">
+                    <h4> CSS </h4>
+                </div>
+                <div class="skill-itm">
+                    <img src="/img/app icons/js.png" alt="JS">
+                    <h4> Java Script </h4>
+                </div>
+                <div class="skill-itm">
+                    <img src="/img/app icons/C- lang.png" alt="C">
+                    <h4> C </h4>
+                </div>
+                <div class="skill-itm">
+                    <img src="/img/app icons/java.png" alt="JAVA">
+                    <h4> JAVA </h4>
+                </div>
+                <div class="skill-itm">
+                    <img src="/img/app icons/python.png" alt="Python">
+                    <h4> Python </h4>
+                </div>
+    
             </div>
 
         </div>
@@ -148,22 +177,31 @@
 
         <!-- Education -->
 
-        <div class="services"  style="background-color: white; color: black;">
+        <div class="education">
 
             <h2>Education</h2>
 
-            <div class="service-items">
+            <div class="edu-container" >
 
-                <div class="gd"  >
+                <div class="edu-card">
                     <img src="/img/edu/clg.jpg" alt="STJIT">
+                    <div class="edu-txt"> B.E Computer Science <br>
+                        STJ Institute of Technology,<br>
+                        Ranebennur</div>
                 </div>
 
-                <div class="gd">
+                <div class="edu-card">
                     <img src="/img/edu/pu.jpg" alt="KH Patil">
+                    <div class="edu-txt"> Pre-University <br>
+                        K H Patil PU Collage,<br>
+                        Hirekerur</div>
                 </div>
 
-                <div class="gd">
+                <div class="edu-card">
                     <img src="/img/edu/school.jpg" alt="St mary's">
+                    <div class="edu-txt"> SSLC <br>
+                        St' Mary's School,<br>
+                        Buradikatti</div>
                 </div>
 
             </div>
@@ -189,7 +227,7 @@
                     <input type="submit" value="Send" class="submit-button">
                 </form>
                 
-                <script src="./js/mail.js"></script>
+                
 
 
                 <!-- <hr class="verticalline"> -->
@@ -238,6 +276,7 @@
                         
                     </div>
                  
+                    
                 </div>
             </div>
             
@@ -250,6 +289,11 @@
             &copy All Rights Reserverd || Design and Developed by Amit
         </div>
     </footer>
+
+    <script src="/js/mail.js"></script>  <!-- mailer -->
+    <script src="/js/nav.js"></script> <!-- navbar js -->
+    <script src="/js/eduslider.js"></script>
+
     
 </body>
 </html>
