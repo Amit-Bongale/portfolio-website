@@ -34,6 +34,7 @@
 }
 
 #resume-button:hover{
+    
     background-color: #008cff;
     color: #ffffff;
     box-shadow: 0 0 5px #0f8cf3,
@@ -41,7 +42,12 @@
                 0 0 100px #0676d1;
 
     border: 0px;
+
+    .reume_download_link{
+        color: white;
+    } 
 }
+
 
 
 @media (max-width: 450px){
@@ -66,6 +72,7 @@
     background-color: #309fee;
     color: white;
     padding: 5px;
+    overflow: hidden;
 }
 
 .Skills-section h2{
@@ -130,8 +137,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 40px;
     width: 100%;
+    padding: 30px 0px;
     flex-wrap: wrap;
 }
 
