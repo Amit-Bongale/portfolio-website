@@ -126,6 +126,7 @@
     flex-direction: column;
     background-color: white; 
     color: black;
+    overflow: hidden;
 }
 
 .education h2 {

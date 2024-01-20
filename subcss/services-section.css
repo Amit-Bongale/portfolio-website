@@ -5,6 +5,7 @@
     flex-direction: column;
     background-color: var(--color-midblue);
     color: white;
+    overflow: hidden;
 }
 
 .services > h2{
