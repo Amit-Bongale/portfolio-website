@@ -82,11 +82,13 @@ a > img{
 
   .visility-false{
     transform: translateX(105%);
+    visibility: hidden;
     opacity: 0%;
   }
 
   .visility-true{
     transform: translateX(0%);
+
     opacity: 100%;
     overflow: hidden;
   }
