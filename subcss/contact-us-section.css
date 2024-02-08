@@ -276,3 +276,30 @@ label{
     }
 
 }
+
+@media (max-width: 340px){
+    .contact{
+        padding: 0px;
+    }
+
+    .cont-details{
+        font-size: 14px;
+    }
+
+    .socialmedia{
+        padding-right: 0px;
+    }
+
+    .useful-links{
+        width: 90%;
+        padding-right: 0px;
+    }
+
+    .useful-links > h2{
+        width: 90%;
+    }
+
+    #LOGO{
+        width: 250px;
+    }
+}
