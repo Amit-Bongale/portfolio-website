@@ -109,7 +109,10 @@
     float:right ;
     right: 0px;
     padding-top: 30px;
+}
 
+.mainpic > img{
+    height: 525px;
 }
 
 .button{
@@ -374,4 +377,11 @@
         padding: 5px;
     }
     
+}
+
+@media (max-width: 360px){
+    .mainpic > img{
+        height: 80vw;
+        padding-left: 0.4rem;
+    }
 }

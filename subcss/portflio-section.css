@@ -161,3 +161,30 @@ video {
     }
     
 }
+
+
+@media (max-width: 350px){
+
+    .portfolio > h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .my-works{
+        padding: 0px;
+        gap: 36px;
+        width: 80%;
+    }
+
+    .card-large{
+        padding: 0;
+    }
+
+    .card-large > video{
+        height: 460px;
+    }
+    
+    .card-small > video{
+        height: 250px;
+    }
+}

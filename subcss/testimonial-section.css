@@ -64,3 +64,10 @@
         padding: 0;
     }
 }
+
+
+@media (max-width: 350px){
+    .testimonial-content > img {
+        width: 320px;
+    }
+}
