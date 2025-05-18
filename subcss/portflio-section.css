@@ -1,4 +1,15 @@
-     /* Portfolio - section*/
+/* projects - section */
+
+.project-headline{
+    display: flex;
+    justify-content: center;
+    padding: 30px 5px;
+    margin: 5px;
+    font-size: 32px;
+}
+
+
+/* Portfolio - section*/
 .portfolio{
     display: flex;
     flex-direction: column;
