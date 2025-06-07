@@ -6,6 +6,7 @@
     background-color: var(--color-midblue);
     color: white;
     overflow: hidden;
+    width: 100vw;
 }
 
 .services > h2{

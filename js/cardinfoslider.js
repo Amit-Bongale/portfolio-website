@@ -18,7 +18,7 @@ projcards.forEach(card => {
     const slider = card.querySelector(".proj-txt")
 
     card.addEventListener("mouseenter", () => {
-        slider.style.transform = "translateY(-130px)";
+        slider.style.transform = "translateY(-150px)";
     });
 
     card.addEventListener("mouseleave", () => {

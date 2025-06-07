@@ -359,8 +359,8 @@
     }
 
     .mainpic > img{
-        height: 325px;
-        padding-left: 0.4rem;
+        height: 320px;
+        padding-left: 0px;
     }
 
     .social-icon{

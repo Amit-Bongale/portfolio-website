@@ -13,7 +13,8 @@
 .portfolio{
     display: flex;
     flex-direction: column;
-    background-color: var(--color-yellow); 
+    background-color: var(--color-yellow);
+    width: 100vw;
 }
 
 .portfolio > h2{
@@ -148,7 +149,6 @@ video {
     }
 
     .my-works{
-        padding: 15px;
         gap: 41px;
     }
 

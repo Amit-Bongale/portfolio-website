@@ -2,10 +2,33 @@
 .projects{
     display: flex;
     align-items: center;
+    justify-content: center;
+    color: white;
     flex-direction: column;
-    background-color: var(--color-yellow); 
-    color: black;
     overflow: hidden;
+    width: 100vw;
+    position: relative;
+}
+
+.proj-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-midblue); 
+    width: 90%;
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+
+.proj-holder-bg{
+    background-color: var(--color-yellow);
+    width: 100vw;
+    bottom: 0px;
+    height: 200px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px 10px 0px 0px ;
 }
 
 .projects h2 {
@@ -27,18 +50,18 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    width: 420px;
-    height: 340px;
+    width: 350px;
+    height: 260px;
     overflow: hidden;
 }
 
-.proj-card img:hover{
+.proj-card:hover{
     scale: 1.02;
     transition: all 500ms ease-in-out;
 }
 
 .proj-card img{
-    width: 450px;
+    width: 350px;
     border-radius: 10px;
 }
 
@@ -49,8 +72,9 @@
     padding: 20px;
     /* background-color: rgba(201, 225, 241, 0.9); */
     background: #191a1c;
-    background: linear-gradient(0deg, rgba(25, 26, 28, 0.8) 10%, rgba(28, 25, 25, 0.1) 100%);
-    width: 400px;
+    background: linear-gradient(0deg, rgba(25, 26, 28, 0.8) 10%, rgba(28, 25, 25, 0.2) 100%);
+    width: 300px;
+    text-wrap: wrap;
     text-align: center;
     transition: all 500ms;
     color: white;
@@ -62,27 +86,33 @@
 
 @media (max-width: 500px){
     .projects h2{
-        font-size: 1.8rem;
-        margin: 10px 0px 0px 0px;
-        padding-top: 10px;
+        font-size: 1.6rem;
+        margin: 2px;
+        padding-top: 2px;
+    }
+
+    .proj-holder{
+        border-radius: 8px;
     }
 
     .proj-container{
         padding: 0px 5px 10px 5px;
-        width: 90%;
     }
 
     .proj-card{
         padding: 12px;
         width: 250px;
-        height: 195px;
+        height: 205px;
+        margin: 2px;
     }
 
     .proj-card img{
-        width: 270px;
+        width: 280px;
     }
 
     .proj-txt{
         font-size: 12px;
+        width: 250px;
+        padding: 10px;
     }
 }

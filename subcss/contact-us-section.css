@@ -222,6 +222,7 @@ label{
 @media (max-width: 470px){
     .contact-us{
         overflow-x: hidden;
+        width: 100vw;
     }
 
     .contact-us > h2{
@@ -234,7 +235,7 @@ label{
 
     .contact{
         padding: 20px;
-        padding-right: 100px;
+        padding-right: 0px;
     }
 
     .input-bars {
@@ -254,7 +255,7 @@ label{
     }
 
     .socialmedia {
-        padding: 2px 60px 5px 0px;
+        padding: 2px 30px 5px 0px;
     }
 
    .socialmedia > h2{
