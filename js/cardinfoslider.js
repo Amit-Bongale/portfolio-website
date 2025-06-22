@@ -11,17 +11,3 @@ cards.forEach(card => {
         slider.style.transform = "translateY(0px)";
     });
 });
-
-const projcards = document.querySelectorAll(".proj-card");
-
-projcards.forEach(card => {
-    const slider = card.querySelector(".proj-txt")
-
-    card.addEventListener("mouseenter", () => {
-        slider.style.transform = "translateY(-150px)";
-    });
-
-    card.addEventListener("mouseleave", () => {
-        slider.style.transform = "translateY(0px)";
-    });
-});

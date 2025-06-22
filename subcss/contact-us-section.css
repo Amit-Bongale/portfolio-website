@@ -27,6 +27,7 @@
 
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .contact-us > h2{
@@ -222,7 +223,6 @@ label{
 @media (max-width: 470px){
     .contact-us{
         overflow-x: hidden;
-        width: 100vw;
     }
 
     .contact-us > h2{
@@ -230,7 +230,7 @@ label{
     }
     .contact-container{
         margin: 10px;
-        width: 100vw;
+        
     }
 
     .contact{
