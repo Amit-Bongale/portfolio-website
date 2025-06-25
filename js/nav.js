@@ -14,7 +14,6 @@ function myfunction(){
         head.style.overflowX = "hidden";
         body.style.overflow = "auto";
         // console.log("nav hidden")
-
     }
 
     else {

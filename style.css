@@ -324,12 +324,6 @@ html {
         /* font-size: 2rem; */
     }
 
-    .auto-type{
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-    }
-
     .button{
         display: flex;
         justify-content: center;
@@ -376,11 +370,11 @@ html {
         position:relative;
         margin: 0px;
         padding: 4px;
-        width: 92%;
-        
+        width: 92%;   
     }
+
     .main-txt{
-        font-size: 1.9rem;
+        font-size: 2rem;
         padding: 5px;
         transform: translateX(-8px);
     }
@@ -388,12 +382,6 @@ html {
     .hi-txt{
         display: flex;
         justify-content: center;
-    }
-
-    .auto-type{
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
     }
 
     .main-description{
@@ -422,9 +410,11 @@ html {
         padding: 4px;
     }
 
+    .mainpic{
+        padding-top: 0px;
+    }
     .mainpic > img{
-        height: 320px;
-        padding-left: 70px;
+        height: 80vw;
     }
 
     .social-icon{
@@ -455,7 +445,5 @@ html {
 
     .mainpic > img{
         height: 80vw;
-        margin-left: 0px;
-        padding-left: 40px;
     }
 }

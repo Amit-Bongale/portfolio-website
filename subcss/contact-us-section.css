@@ -28,6 +28,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
+    justify-content: center;
 }
 
 .contact-us > h2{
@@ -78,8 +80,8 @@ label{
     color: #ffffff;
     background-color: #4d47fd;
     border: none;
-    text-shadow: 0 0 5px #ffffff,
-                0 0 20px #ffffff;
+    cursor: pointer;
+    text-shadow: 0 0 5px #ffffff;
     box-shadow: 0 0 5px #008cff,
                 0 0 20px #008cff,
                 0 0 800px #008cff;
@@ -164,15 +166,13 @@ label{
 
 #Logo{
     width:300px;
-    margin: -20px; 
-    padding: -200px;
 }
 
 .input-area{
     border-radius: 10px;
 }
 
-@media (max-width: 1020px){
+@media (max-width: 1050px){
     .socialmedia{
         display: flex;
         gap: 60px;
@@ -230,7 +230,6 @@ label{
     }
     .contact-container{
         margin: 10px;
-        
     }
 
     .contact{
@@ -245,17 +244,28 @@ label{
    .useful-links{
         width: 100%;
         padding: 15px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
    .verticalline{
         rotate: 90deg;
         height: 50px;
         align-items: center;
-        margin: 0px 170px;
+        margin: 20px 200px;
+        width: 100%;
+        overflow: hidden;
     }
 
     .socialmedia {
-        padding: 2px 30px 5px 0px;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
    .socialmedia > h2{
@@ -272,6 +282,7 @@ label{
     }
 
    .social-images > a > img {
+        margin: 5px;
         width: 40px;
     }
 
