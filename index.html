@@ -58,7 +58,7 @@
 
 </head> 
 
-<body class="main">
+<body class="main" id="/">
 
     <script src="/js/nav.js"></script>  <!-- navbar js -->
 
@@ -84,7 +84,7 @@
         </nav>
     </header>
 
-
+    
     <main >
 
         <!--                     LANDING PAGE                        -->
@@ -93,32 +93,37 @@
 
             <div class="maintext">
                 <div class="main-txt" data-aos="fade-right">
-                    <span class="hi-txt">Hi,I'm AMITH </span><span class="auto-type"> </span>
+                    <span class="hi-txt">Hi,I'm AMITH </span>
+                    <div id="animatedText"></div>
+                    <div class="roles">
+                    </div>
                 </div>
 
                 <div class="main-description" data-aos="fade-right" data-aos-delay="200" data-aos-duration="500">
                     I'm a skilled graphic, motion graphic, and web application Developer with 4 years of experience in digital marketing and Advertising. Explore my diverse range of captivating visuals and user-friendly Designs. From logos to social media graphics, I create designs that captivate audiences and drive results. Let's bring your vision to reality together.
                 </div>
 
-                <span class="button" data-aos="zoom-in" data-aos-delay="180">
-                    <button id="hire-button">
-                        <a href="#contact-us-sec" class="hir"> Hire Me </a>
-                    </button>
-                </span>
+                <div class="main-links">
+                    <span class="button" data-aos="zoom-in" data-aos-delay="180">
+                        <button id="hire-button">
+                            <a href="#contact-us-sec" class="hir"> Hire Me </a>
+                        </button>
+                    </span>
 
-                <div class="social-icon" data-aos="flip-up" data-aos-delay="300">
-                    <a href="https://github.com/Amit-Bongale">
-                        <img src="./img/socaialMedia/github-white.png" alt="github">
-                    </a>
-                    <a href="https://www.instagram.com/amit_edits_7/">
-                        <img src="./img/socaialMedia/instagram-white.png" alt="instagram">
-                    </a>
-                    <a href="mailto:amitbongale14@gmail.com">
-                        <img src="./img/socaialMedia/gmail-white.png" alt="Gmail">
-                    </a>
-                    <a href="https://www.linkedin.com/in/amith-bongale/">
-                        <img src="./img/socaialMedia/linkedin-white.png" alt="LinkedIn">
-                    </a>
+                    <div class="social-icon" data-aos="flip-up" data-aos-delay="300">
+                        <a href="https://github.com/Amit-Bongale">
+                            <img src="./img/socaialMedia/github-white.png" alt="github">
+                        </a>
+                        <a href="https://www.instagram.com/amit_edits_7/">
+                            <img src="./img/socaialMedia/instagram-white.png" alt="instagram">
+                        </a>
+                        <a href="mailto:amitbongale14@gmail.com">
+                            <img src="./img/socaialMedia/gmail-white.png" alt="Gmail">
+                        </a>
+                        <a href="https://www.linkedin.com/in/amith-bongale/">
+                            <img src="./img/socaialMedia/linkedin-white.png" alt="LinkedIn">
+                        </a>
+                    </div>
                 </div>
             </div>
   
@@ -140,17 +145,17 @@
             <div class="service-items">
 
 
-                <a href="https://drive.google.com/drive/folders/1k3Ygb-qe8txZOSyb5L7cft_zyWCGQgMx?usp=sharing">
+                <a href="https://drive.google.com/drive/folders/1k3Ygb-qe8txZOSyb5L7cft_zyWCGQgMx?usp=sharing" aria-label="Graphic Design">
                 <div class="gd"  data-aos="slide-up"  data-aos-offset="150" data-aos-duration="600" >
                     <img  src="./img/services/graphic-design1.jpg" alt="Graphic Design" width="450px" loading="lazy">
                 </div></a>
 
-                <a href="https://drive.google.com/drive/folders/1Z_YZkI6m8GpvxuYsBvvJ-PsEc_s63Fck?usp=sharing">
+                <a href="https://drive.google.com/drive/folders/1Z_YZkI6m8GpvxuYsBvvJ-PsEc_s63Fck?usp=sharing" aria-label="Motion Design">
                 <div class="gd" data-aos="slide-up"  data-aos-offset="150" data-aos-duration="600" data-aos-delay="150" >
                     <img src="./img/services/motion-design1.jpg" alt="Motion Design" width="450px" loading="lazy">
                 </div> </a>
                 
-                <a href="">
+                <a href="#websites" aria-label="Web Design">
                 <div class="gd" data-aos="slide-up"  data-aos-offset="150" data-aos-duration="6000" data-aos-delay="300">
                     <img src="./img/services/web-dev1.jpg" alt="Web Design" width="450px" loading="lazy">
                 </div> </a>
@@ -209,7 +214,7 @@
 
 
         <!--                       PROJECTS SECTION                      -->
-        <div class="projects">
+        <div class="projects" id="websites">
             <div class="proj-holder">
 
                 <h2>Projects I have Built</h2>
@@ -246,7 +251,7 @@
                         </div>
                     </a>
 
-                    <a>
+                    <a href="https://ecommerce-ezbuy.vercel.app/">
                         <div class="proj-card">
                             <div class="card-inner">
                                 <div class="card-front">
@@ -323,7 +328,7 @@
 
             <div class="btn">
                 <div class="portfolio-button">
-                    <a href="https://drive.google.com/drive/folders/1uaP5MOz4p0w1WRa2F7o0VwYW648I9RL8?usp=sharing">SEE MORE</a>
+                    <a href="https://drive.google.com/drive/folders/1uaP5MOz4p0w1WRa2F7o0VwYW648I9RL8?usp=sharing" aria-label=" more works">SEE MORE</a>
                 </div>
             </div>
 
@@ -359,7 +364,7 @@
                     <input type="email" name="email" id="email"  class="input-bars">
                     <label for="mobile-no">Mobile Number</label>
                     <input type="number" name="mobile-no" id="mobile-no" class="input-bars">
-                    <label for="despcription">Discription</label>
+                    <label for="description">Discription</label>
                     <textarea name="description" id="description" rows="10" class="input-area"></textarea>
                     <input type="submit" value="Send" class="submit-button">
                 </form>
@@ -435,6 +440,7 @@
 
 
     <!-- Script files -->
+    <script src="/js/Autotype.js"></script>
     
     <!-- video loader -->
     <script src="/js/videoloader.js"></script>

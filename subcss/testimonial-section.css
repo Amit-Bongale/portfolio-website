@@ -35,6 +35,10 @@
 
 @media (max-width: 700px){
 
+    .testimonial{
+        overflow: hidden;
+    }
+
     .testimonial > h2{
         font-size: 1.5rem;
         display: flex;
@@ -63,11 +67,15 @@
     .ppl-testimonial{
         padding: 0;
     }
+
+     .testimonial-content > img {
+        width: 320px;
+    }
 }
 
 
 @media (max-width: 350px){
     .testimonial-content > img {
-        width: 320px;
+        width: 280px;
     }
 }

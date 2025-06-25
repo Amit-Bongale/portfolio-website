@@ -33,6 +33,14 @@
     background-color: white;
 }
 
+
+.resume_download_link{
+    text-decoration: none;
+    color: var(--color-darkblue);
+    font-weight: 600;
+}
+
+
 #resume-button:hover{
     
     background-color: #008cff;
@@ -43,11 +51,11 @@
 
     border: 0px;
 
-    .reume_download_link{
+    .resume_download_link{
+        text-decoration: none;
         color: white;
     } 
 }
-
 
 
 @media (max-width: 450px){

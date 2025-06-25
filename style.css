@@ -17,10 +17,39 @@
     text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 10px; /* or height: 10px for horizontal */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Thumb (the handle) */
+::-webkit-scrollbar-thumb {
+  background: var(--color-midblue);
+  border-radius: 5px;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
                                 /* landingpage */
 
 
-    /*           LANDING PAGE CONTENT            */
+/*           LANDING PAGE CONTENT            */
 
 .landingpage{
     display: flex;
@@ -34,7 +63,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .main-txt{
@@ -52,43 +80,52 @@
     color: var(--color-black);
 }
 
-.auto-type::before {
-    color:#0676d1;
-    content: "A Motion designer";
-    animation: typing 20s infinite;
-}
- 
-.auto-type::after{
-    content: " ";
-    position: absolute;
-    width: 100%;
-    background: #ffffff;
-    height: 50%;
-    /* left : 0px; */
-    /* border-left: 6px solid black;  */
-    animation: cursor 6.65s cubic-bezier(0.1, 0, 0, 3) infinite;
+#animatedText{
+    letter-spacing: 0;
+    margin-left: -5px;
+    color: var(--color-midblue); 
+    overflow: hidden;
 }
 
-@keyframes typing{
-    0%,34%{
-        content:'A Graphic Designer';
+#animatedText span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+    margin: 0;
+    padding: 0;
+}
+
+#animatedText span:not(:last-child) {
+  margin-right: -10px;
+}
+
+.fadeOutUp {
+    animation: fadeOutUp 0.5s forwards !important;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    35%,67%{
-        content:'A Motion Designer';
-    }
-    68%,100%{
-        content:'A Web Developer';
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@keyframes cursor{
-    from{
-        left: 0%;
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
     }
-    to{
-        left: 99%;
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
     }
 }
+
 
 .main-description{
     display: flex;
@@ -106,8 +143,7 @@
     justify-self: right;
     flex-wrap: wrap;
     position: relative;
-    float:right ;
-    right: 20px;
+    float:right;
     padding-top: 30px;
     overflow: hidden;
 }
@@ -204,6 +240,7 @@
 
     .mainpic > img{
         height: 400px;
+        right: 60px;
     }
 
     .social-icon{
@@ -218,33 +255,49 @@
 
 
 @media (max-width: 820px){
+    
+    
+
     .mainpic > img{
         height: 360px;
     }
 }
 
-@media (max-width: 750px){
+@media (min-width: 600px) and (max-width: 750px){
 
-    /* .landingpage{
-        flex-direction: column-reverse;
-    } */
+    .landingpage{
+        flex-direction: row;
+    }
 
     .main-txt{
-        font-size: 2rem;
+        font-size: 3rem;
+        text-align: center;
     }
 
     .main-description{
-        font-size: 0.75em;
-        width: 50%;
+        font-size: 1em;
+        width: 90%;
         flex-wrap: wrap;
-        line-height: 20px;
+        line-height: 28px;
+        text-align: center;
+        /* background-color: rebeccapurple; */
+    }
+    
+    .main-links{
+        display: flex;
+        justify-content: space-around;
     }
 
     #hire-button{
-        width: 85%;
+        width: 100%;
     }
+
     .mainpic{
         padding-top: 10px;
+        display: flex;
+        align-items : center;
+        justify-content: center;
+        width: 100%;
     }
 
     .mainpic > img{
@@ -260,8 +313,6 @@
         width: 30px;
         padding: 5px;
     }
-
-
 }
 
 @media (max-width: 600px){
@@ -269,6 +320,7 @@
     .main-txt , .hi-txt{
         display: flex;
         justify-content: center;
+        align-items: center;
         /* font-size: 2rem; */
     }
 
@@ -306,9 +358,15 @@
         padding: 5px;
     }
 
+    .mainpic{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
     .mainpic > img{
         height: 400px;
-        padding-left: 5rem;
     }
 }
 
@@ -323,7 +381,6 @@
     }
     .main-txt{
         font-size: 1.9rem;
-        /* margin: 0; */
         padding: 5px;
         transform: translateX(-8px);
     }
@@ -390,6 +447,10 @@
 
     .main-txt{
         font-size: 1.5rem;
+    }
+
+    .mainpic{
+        padding-top: 5px;
     }
 
     .mainpic > img{

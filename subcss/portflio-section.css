@@ -185,7 +185,8 @@ video {
     .my-works{
         padding: 0px;
         gap: 36px;
-        width: 80%;
+        width: 100%;
+        place-content: center;
     }
 
     .card-large{
