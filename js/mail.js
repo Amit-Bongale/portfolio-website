@@ -1,5 +1,5 @@
-
-submit.addEventListener('submit',(e)=>{
+function sendEmail(){
+  submit.addEventListener('submit',(e)=>{
   e.preventDefault();
   console.log("Submitted");
 
@@ -16,3 +16,5 @@ submit.addEventListener('submit',(e)=>{
     message => alert("Thank you for contacting, we will reach you out soon")
   );
 });
+
+}

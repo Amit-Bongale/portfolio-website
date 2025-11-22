@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit | Creative Developer & Designer</title>
+    <meta name="description" content="Portfolio of Amit - Web Developer, Graphic Designer, and Motion Graphic Artist.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom Configuration for Tailwind  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0284c7',   /* Matches your primary blue */
+                            dark: '#0f172a',   /* Slate 900 */
+                            yellow: '#fbbf24', /* Matches your yellow accent */
+                            light: '#f8fafc',
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0284c7;
+        }
+
+        /* Utility classes for reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #0284c7, #3b82f6);
+        }
+        
+        /* Typing Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-start infinite;
+            color: #fbbf24;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Smooth continuous scroll for Swiper */
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        .swiper-wrapper {
+            transition-timing-function: linear; /* Default, overridden for logo ticker */
+        }
+        /* Specific ease for standard carousels like testimonials */
+        .testimonial-swiper .swiper-wrapper {
+            transition-timing-function: ease-out !important;
+        }
+        /* Specific linear for logos */
+        .logo-swiper .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        /* Pagination Bullet Colors */
+        .swiper-pagination-bullet-active {
+            background-color: #0284c7 !important;
+        }
+
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-yellow selection:text-brand-dark">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <a href="/" class="flex items-center gap-2 group">
+                    <img src="./img/logowhite.png" alt="Amit Logo" class="w-20 mt-1 h-auto filter  invert">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium text-slate-600 hover:text-brand-blue transition-colors">Home</a>
+                    <a href="#services" class="text-sm font-medium text-slate-600 hover:text-brand-blue transition-colors">Services</a>
+                    <a href="#work" class="text-sm font-medium text-slate-600 hover:text-brand-blue transition-colors">Work</a>
+                    <a href="#testimonials" class="text-sm font-medium text-slate-600 hover:text-brand-blue transition-colors">Testimonials</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-brand-blue text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-0.5">Let's Talk</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-blue focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded-lg">Home</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded-lg">Services</a>
+                <a href="#work" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded-lg">Work</a>
+                <a href="#testimonials" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded-lg">Testimonials</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-brand-blue font-bold">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-28 pb-0 overflow-hidden">
+        <!-- Background Shapes -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-20 right-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+            <div class="absolute top-40 right-20 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="reveal active space-y-8 text-center lg:text-left order-2 lg:order-1">
+                    <!-- <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-blue text-xs font-bold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-blue mr-2 animate-pulse"></span>
+                        Available for Freelance
+                    </div> -->
+                    
+                    <h1 class="text-5xl lg:text-7xl font-heading font-bold text-slate-900 leading-tight">
+                        Hi, I'm <span class="text-gradient">Amith</span><br>
+                        <span class="text-3xl lg:text-4xl font-normal text-slate-500 mt-2 block typing-cursor">I build <span id="typing-text" class="text-slate-800 font-semibold"></span></span>
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        A passionate developer and designer with 4 years of experience crafting digital experiences. I combine code and motion to bring visions to life.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#work" class="px-8 py-4 bg-brand-blue text-white font-semibold rounded-full shadow-lg shadow-blue-500/30 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                            View My Work <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 bg-white text-slate-700 border border-slate-200 font-semibold rounded-full hover:bg-slate-50 hover:border-slate-300 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                            Contact Me <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Social Stats -->
+                    <div class="pt-6 flex items-center justify-center lg:justify-start gap-8 text-slate-400">
+                        <a href="https://github.com/Amit-Bongale" class="hover:text-brand-blue transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
+                        <a href="https://www.instagram.com/amit_edits_7/" class="hover:text-pink-600 transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="https://www.linkedin.com/in/amith-bongale/" class="hover:text-blue-700 transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                        <a href="mailto:amitbongale14@gmail.com" class="hover:text-red-500 transition-colors"><i data-lucide="mail" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="order-2 flex justify-center relative reveal delay-200">
+                    <!-- Decorative circle behind -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-yellow-50 rounded-full transform rotate-6 scale-95 opacity-50"></div>
+                    
+                    <div class="relative w-[1/2] top-6 overflow-hidden animate-float">
+                        <img src="./img/pic_3copy.png" 
+                            alt="Amit Portrait" 
+                            class="w-full h-full object-cover"
+                            onerror="this.src='https://placehold.co/400x400/0284c7/white?text=Amit'">
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute bottom-10 -left-4 md:left-0 bg-white p-4 rounded-2xl shadow-xl animate-bounce duration-[3000ms]">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold uppercase">Experience</p>
+                                <p class="text-lg font-bold text-slate-900">4+ Years</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="py-10 border-y border-slate-100 bg-white overflow-hidden reveal">
+        <div class="max-w-7xl mx-auto px-4 mb-8">
+            <p class="text-center text-slate-400 text-sm font-semibold uppercase tracking-widest">I have Worked For</p>
+        </div>
+        
+        <!-- Swiper Container -->
+        <div class="swiper logo-swiper w-full px-4">
+            <div class="swiper-wrapper items-center">
+                <!-- Slides -->
+                <img src="./img/brandsLogo/1filmyscoop.png" alt="Filmyscoop" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Digiphins.png" alt="Digiphins" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1teju.png" alt="teju masala" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1wunderfit.png" alt="wunderfit" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/AyusCare.png" alt="AyusCare" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1zest job.png" alt="Zest Job" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1eezego.png" alt="eezego" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Go-expert-service.png" alt="go expert services" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1golden-touch.png" alt="goldentouch" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/voicing_silence.png" alt="goldentouch" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1KNKH.png" alt="KNKH" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1otr.png" alt="on the rocks" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1ninna-sanihake.png" alt="Ninna sanihake" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Royal-Indraprastha.png" alt="Royal Indraprastha" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1SUFH.png" alt="Sri Udupi food hub" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1teju-fryd.png" alt="Teju fry'd" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+            </div>
+        </div>
+
+
+        <div class="swiper mobile-logo-swiper w-full px-4 mt-8 md:hidden">
+            <div class="swiper-wrapper items-center">
+                <!-- Slides -->
+                <img src="./img/brandsLogo/1wunderfit.png" alt="wunderfit" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                 <img src="./img/brandsLogo/1filmyscoop.png" alt="Filmyscoop" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/AyusCare.png" alt="AyusCare" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1eezego.png" alt="eezego" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Digiphins.png" alt="Digiphins" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Go-expert-service.png" alt="go expert services" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1golden-touch.png" alt="goldentouch" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1teju.png" alt="teju masala" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/voicing_silence.png" alt="goldentouch" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1zest job.png" alt="Zest Job" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1KNKH.png" alt="KNKH" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1otr.png" alt="on the rocks" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1ninna-sanihake.png" alt="Ninna sanihake" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Royal-Indraprastha.png" alt="Royal Indraprastha" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1SUFH.png" alt="Sri Udupi food hub" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1teju-fryd.png" alt="Teju fry'd" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">Services That I Offer</h3>
+                <div class="w-20 h-1.5 bg-brand-yellow mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-slate-100 group reveal">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-brand-blue mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                        <i data-lucide="layout" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Web Development</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        Building responsive, fast, and modern web applications using the latest technologies. From landing pages to complex dashboards.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-slate-100 group reveal delay-100">
+                    <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i data-lucide="pen-tool" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Graphic Design</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        Creating visual identities, logos, and marketing materials that resonate with your audience and strengthen your brand presence.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-slate-100 group reveal delay-200">
+                    <div class="w-14 h-14 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-600 mb-6 group-hover:bg-brand-yellow group-hover:text-brand-dark transition-colors">
+                        <i data-lucide="film" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Motion Graphics</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        Bringing static designs to life with fluid animations, video editing, and engaging motion content for social media and ads.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Work Section -->
+    <section id="work" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between  mb-12 reveal">
+                <div>
+                    <h2 class="text-brand-blue font-bold tracking-wide uppercase text-sm mb-2">Portfolio</h2>
+                    <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900">Featured Projects</h3>
+                </div>
+            </div>
+
+            <!-- Web Projects Grid -->
+            <div class="mb-20">
+                <div class="flex justify-between items-center mb-6">
+                    <h4 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                        <i data-lucide="globe" class="w-5 h-5 text-brand-blue"></i> Web Applications
+                    </h4>
+                    <!-- Navigation Arrows -->
+                    <div class="flex gap-2">
+                        <button class="web-prev w-10 h-10 rounded-full bg-slate-100 hover:bg-brand-blue hover:text-white transition-colors flex items-center justify-center group">
+                            <i data-lucide="chevron-left" class="w-5 h-5 group-hover:text-white text-slate-600"></i>
+                        </button>
+                        <button class="web-next w-10 h-10 rounded-full bg-slate-100 hover:bg-brand-blue hover:text-white transition-colors flex items-center justify-center group">
+                            <i data-lucide="chevron-right" class="w-5 h-5 group-hover:text-white text-slate-600"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="swiper web-project-swiper pb-12">
+                    <div class="swiper-wrapper">
+                        <!-- Project 1 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="group relative rounded-2xl overflow-hidden shadow-lg reveal h-full">
+                                <div class="aspect-video overflow-hidden">
+                                    <img src="/img/Projects/rides_for_rent_copy.jpg" 
+                                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" alt="Car Website">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                                    <span class="text-brand-yellow text-sm font-bold uppercase mb-2">Automotive</span>
+                                    <h3 class="text-2xl font-bold text-white mb-2">Rides For Rent</h3>
+                                    <p class="text-slate-300 text-sm mb-4 line-clamp-2">A car booking platform with an admin panel to manage rides. with a responsive UI and secure backend integration for seamless operations.</p>
+                                    <a href="#" class="inline-flex items-center text-white font-medium hover:text-brand-yellow transition-colors">
+                                        View Project <i data-lucide="external-link" class="ml-2 w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 2 -->
+                        <div class="swiper-slide h-auto">
+                            <div class="group relative rounded-2xl overflow-hidden shadow-lg reveal delay-100 h-full">
+                                <div class="aspect-video overflow-hidden">
+                                    <img src="/img/Projects/hms_copy_min.jpg" 
+                                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" alt="Health Website">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                                    <span class="text-brand-yellow text-sm font-bold uppercase mb-2">Healthcare</span>
+                                    <h3 class="text-2xl font-bold text-white mb-2">MediCare Platform</h3>
+                                    <p class="text-slate-300 text-sm mb-4 line-clamp-2">A complete healthcare web app for booking appointments and  managing patient data. Includes modules for doctors, staff, and admins.</p>
+                                    <a href="https://hospital-managementsystem.vercel.app/" class="inline-flex items-center text-white font-medium hover:text-brand-yellow transition-colors">
+                                        View Project <i data-lucide="external-link" class="ml-2 w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 (New) -->
+                         <div class="swiper-slide h-auto">
+                            <div class="group relative rounded-2xl overflow-hidden shadow-lg reveal h-full">
+                                <div class="aspect-video overflow-hidden">
+                                    <img src="/img/Projects/interior copy-min.jpg" 
+                                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" alt="Dashboard">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                                    <span class="text-brand-yellow text-sm font-bold uppercase mb-2">DESIGN</span>
+                                    <h3 class="text-2xl font-bold text-white mb-2">RENEVETE</h3>
+                                    <p class="text-slate-300 text-sm mb-4 line-clamp-2">An Interior Design website featuring projects, and services. Designed for smooth user experience with modern minimal design.</p>
+                                    <a href="https://interior-design-blond.vercel.app/index.html" class="inline-flex items-center text-white font-medium hover:text-brand-yellow transition-colors">
+                                        View Project <i data-lucide="external-link" class="ml-2 w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 (New) -->
+                         <div class="swiper-slide h-auto">
+                            <div class="group relative rounded-2xl overflow-hidden shadow-lg reveal h-full">
+                                <div class="aspect-video overflow-hidden">
+                                    <img src="/img/Projects/ez_buy_copy.jpg" 
+                                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" alt="E-commerce">
+                                </div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                                    <span class="text-brand-yellow text-sm font-bold uppercase mb-2">E-Commerce</span>
+                                    <h3 class="text-2xl font-bold text-white mb-2"> Ez-Buy</h3>
+                                    <p class="text-slate-300 text-sm mb-4 line-clamp-2">An application featuring product listings cart, and order management. Designed for smooth user experience and easy navigation</p>
+                                    <a href="#" class="inline-flex items-center text-white font-medium hover:text-brand-yellow transition-colors">
+                                        View Project <i data-lucide="external-link" class="ml-2 w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+           
+            <!-- Motion & Graphics Grid -->
+            <div>
+                <h4 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+                    <i data-lucide="palette" class="w-5 h-5 text-brand-blue"></i> Motion & Graphics
+                </h4>
+
+                <!-- masonry columns -->
+                <div class="columns-2 md:columns-4 gap-4 md:gap-6 space-y-4">
+                    <!-- tile -->
+                    <div class="break-inside-avoid rounded-xl overflow-hidden group cursor-pointer">
+                        <video src="./videos/28-7 chicken curry_1.mp4" class="w-full h-auto object-cover" controls loading="lazy"></video>
+                    </div>
+
+                    <div class="break-inside-avoid rounded-xl overflow-hidden group cursor-pointer">
+                        <video src="./videos/puppy love.mp4" class="w-full h-auto object-cover"
+                        controls loading="lazy"></video>
+                    </div>
+
+                    <div class="col-span-1 md:col-span-2  relative aspect-video rounded-xl overflow-hidden aspect-[4/5] group cursor-pointer reveal delay-150">
+                        <img src="./img/works/diabetics.jpg" class="w-full h-full object-cover" alt="Product Design">
+                    </div>
+
+                    <div class="col-span-1 relative rounded-xl overflow-hidden aspect-[4/5] group cursor-pointer reveal delay-150">
+                        <img src="./img/works/1 million followers copy.jpg" class="w-full h-full object-cover" alt="Product Design">
+                    </div>
+
+                    <div class="break-inside-avoid rounded-xl overflow-hidden group cursor-pointer">
+                        <video src="./videos/7-5 fru'd -chicken wrap.mp4" class="w-full h-auto object-cover" controls loading="lazy"></video>
+                    </div>
+
+                    <div class="col-span-1 relative rounded-xl aspect-square overflow-hidden group cursor-pointer reveal delay-200">
+                        <video src="./videos/13-12 otr happy hours.mp4" controls loading="lazy" class="w-full h-full object-contain"> </video>
+                    </div>
+
+                    <div class="row-span-2 relative rounded-xl aspect-[9/16] overflow-hidden group cursor-pointer reveal delay-200">
+                         <video src="./videos/7-2 SUFH South Indian Meal.mp4" controls loading="lazy" class="w-full h-full object-cover"> </video>
+                    </div>
+
+                    <div class="col-span-1 md:col-span-2 aspect-video relative rounded-xl overflow-hidden group cursor-pointer reveal delay-75">
+                        <video src="./videos/GATHA VAIBHAVA _2.mp4" class="w-full h-full object-cover " alt="Video Thumbnail" controls loading="lazy"></video>
+                    </div>
+
+                    <div class="col-span-1 relative rounded-xl overflow-hidden aspect-[4/5] group cursor-pointer reveal delay-150">
+                        <img src="./img/works/insta brown.jpg" class="w-full h-full object-cover" alt="Product Design">
+                    </div>
+
+                    <div class="break-inside-avoid rounded-xl overflow-hidden group cursor-pointer">
+                        <video src="./videos/7-4 packers 2.mp4" class="w-full h-auto object-cover"
+                        controls loading="lazy"></video>
+                    </div>
+
+                </div>
+
+                <div class="w-full flex justify-center mt-12">
+                    <a href="https://drive.google.com/drive/folders/1uaP5MOz4p0w1WRa2F7o0VwYW648I9RL8?usp=sharing" class="text-center px-12 py-4 bg-black text-white rounded-full"> See More</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-yellow/20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-blue font-bold tracking-wide uppercase text-sm mb-2">Testimonials</h2>
+                <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900">People say About us</h3>
+            </div>
+
+            <!-- Swiper Container for Testimonials -->
+            <div class="swiper testimonial-swiper w-full px-4 pb-12 reveal">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-brand-yellow h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-4 mb-6">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Hemanth" class="w-14 h-14 rounded-full object-cover border-2 border-slate-100">
+                                    <div>
+                                        <h4 class="font-bold text-slate-900">Hemanth P M</h4>
+                                        <p class="text-sm text-slate-500">Associate Director</p>
+                                    </div>
+                                    <i data-lucide="quote" class="ml-auto text-slate-200 w-10 h-10 fill-current"></i>
+                                </div>
+                                <p class="text-slate-600 italic">
+                                    Amit is a talented and passionate designer and video editor
+                                    who has been a valuable asset to team for the past three years.
+                                    His ability to think creatively and come up with innovative
+                                    ideas has likely been a significant factor in his success.
+                                    Amit doesn't just follow client input, he brings his own
+                                    ideas and perspectives to the table. He has a knack for
+                                    understanding what clients will like and grasping the
+                                    design elements that will resonate with them.
+                                </p>
+                            </div>
+                            <div class="flex text-brand-yellow mt-6 gap-1">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide h-auto">
+                         <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-brand-yellow h-full flex flex-col justify-between">
+                             <div>
+                                <div class="flex items-center gap-4 mb-6">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Pruthvi" class="w-14 h-14 rounded-full object-cover border-2 border-slate-100">
+                                    <div>
+                                        <h4 class="font-bold text-slate-900">Pruthvi Kumar S</h4>
+                                        <p class="text-sm text-slate-500">Founder & CEO - Digiphins Innovation Pvt Ltd.</p>
+                                    </div>
+                                     <i data-lucide="quote" class="ml-auto text-slate-200 w-10 h-10 fill-current"></i>
+                                </div>
+                                <p class="text-slate-600 italic">
+                                    Amit Bongale•s outstanding multimedia design expertise
+                                    has elevated our brand collaborations to new heights over
+                                    the past year, delivering visually stunning and impactful
+                                    videos that captivate audiences. I wish him continued
+                                    success in all his creative endeavors.
+                                </p>
+                            </div>
+                            <div class="flex text-brand-yellow mt-6 gap-1">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Slide 3 (New Placeholder Slide to show scrolling) -->
+                    <div class="swiper-slide h-auto">
+                         <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-brand-yellow h-full flex flex-col justify-between">
+                             <div>
+                                <div class="flex items-center gap-4 mb-6">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Sarah" class="w-14 h-14 rounded-full object-cover border-2 border-slate-100">
+                                    <div>
+                                        <h4 class="font-bold text-slate-900">Sarah Jenkins</h4>
+                                        <p class="text-sm text-slate-500">Marketing Lead</p>
+                                    </div>
+                                     <i data-lucide="quote" class="ml-auto text-slate-200 w-10 h-10 fill-current"></i>
+                                </div>
+                                <p class="text-slate-600 italic">
+                                    "Working with Amit was an absolute pleasure. He understood our requirements perfectly and delivered a website that exceeded our expectations. His attention to detail is unmatched."
+                                </p>
+                            </div>
+                            <div class="flex text-brand-yellow mt-6 gap-1">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <h2 class="text-brand-yellow font-bold tracking-wide uppercase text-sm mb-2">Get in Touch</h2>
+                    <h3 class="text-4xl font-heading font-bold mb-6">Let's start a project together</h3>
+                    <p class="text-slate-400 mb-12 text-lg">
+                        Have an idea? I'd love to hear about it. Send me a message and let's make something amazing.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center text-brand-blue shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Location</h4>
+                                <p class="text-slate-400">Hirekerur, Karnataka, India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center text-brand-blue shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Phone</h4>
+                                <p class="text-slate-400">+91 636413347</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center text-brand-blue shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Email</h4>
+                                <p class="text-slate-400">amitbongale14@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-slate-800 p-8 md:p-10 rounded-2xl shadow-2xl reveal delay-100">
+                    <form action="sendEmail()" type="submit" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Mobile Number</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all" placeholder="+91 98765 43210">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-brand-blue text-white font-bold rounded-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 place-items-center">
+                <!-- Brand -->
+                <div>
+                    <a href="/" class="flex items-center gap-2 text-white justify-center">
+                        <img src="./img/logowhite.png" alt="" srcset="" class="w-36 h-auto">
+                    </a>
+                    <p class="text-sm text-slate-500 text-center -mt-4">
+                        Crafting digital experiences with code and creativity.
+                    </p>
+                </div>
+                
+                <!-- Links -->
+                <div class="flex gap-8 md:justify-center">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#work" class="hover:text-white transition-colors">Portfolio</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </div>
+
+                <!-- Socials -->
+                <div class="flex gap-4 md:justify-end">
+                    <a href="https://github.com/Amit-Bongale" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    <a href="https://www.instagram.com/amit_edits_7/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="https://www.linkedin.com/in/amith-bongale/" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-slate-800 text-sm">
+                &copy; <span id="year"></span> Amit. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript Logic -->
+
+    <!-- nav -->
+    <script src="./js/nav.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+
+    <!-- mailer -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- typing effect -->
+    <script src="./js/type.js"></script> 
+
+
+    <script>
+
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger once on load
+
+    </script>
+
+</body>
+</html>
