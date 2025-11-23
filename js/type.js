@@ -1,4 +1,4 @@
-const words = ["Web Applications", "Motion Graphics", "Brand Identities", "Digital Experiences"];
+const words = ["Web Applications", "Motion Graphics", "Digital Experiences"];
 let i = 0;
 let timer;
 

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Optimization: Point bots to your sitemap (See Next Step below)
+Sitemap: https://www.amithbongale.in/sitemap.xml

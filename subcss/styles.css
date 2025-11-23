@@ -1,0 +1,65 @@
+ /* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0284c7;
+}
+
+/* Utility classes for reveal animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text Gradient */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #0284c7, #3b82f6);
+}
+
+/* Typing Cursor */
+.typing-cursor::after {
+    content: '|';
+    animation: blink 1s step-start infinite;
+    color: #fbbf24;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Smooth continuous scroll for Swiper */
+.swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear; /* Default, overridden for logo ticker */
+}
+/* Specific ease for standard carousels like testimonials */
+.testimonial-swiper .swiper-wrapper {
+    transition-timing-function: ease-out !important;
+}
+/* Specific linear for logos */
+.logo-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+/* Pagination Bullet Colors */
+.swiper-pagination-bullet-active {
+    background-color: #0284c7 !important;
+}

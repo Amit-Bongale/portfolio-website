@@ -1,39 +1,6 @@
-// const words = ["A Motion Designer", "A Graphic Designer", "A Web Developer"];
-// const textContainer = document.getElementById("animatedText");
-
-// let wordIndex = 0;
-
-// function showWord(word) {
-
-// textContainer.innerHTML = ""; // Clear previous word
-
-// [...word].forEach((char, i) => {
-
-//     const span = document.createElement("span");
-
-//     if (char === " ") {
-//         span.innerHTML = "&nbsp;"; // preserve space
-//     } else {
-//         span.textContent = char;
-//     }
-//     span.style.animationDelay = `${i * 0.05}s`; // delay per character
-//     textContainer.appendChild(span);
-
-// });
-
-// // Move to next word after full animation
-// const totalTime = word.length * 100 + 2500; // char animation + pause
-// setTimeout(() => {
-//     wordIndex = (wordIndex + 1) % words.length;
-//     showWord(words[wordIndex]);
-// }, totalTime);
-// }
-
-// // Start animation
-// showWord(words[wordIndex]);
-
 const words = ["A Motion Designer", "A Graphic Designer", "A Web Developer"];
-const textContainer = document.getElementById("animatedText");
+// const textContainer = document.getElementById("animatedText");
+const textContainer = document.getElementById('typing-text')
 
 let wordIndex = 0;
 
