@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amith Bongale | Graphic, Motion Graphic, & Web Designer</title>
-
     
     <link rel="icon" type="image/png" sizes="32x32" href="./img/LOGO.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
@@ -29,13 +28,17 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_UK">
 
-    <!-- og tag end -->
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.amithbongale.in/">
-    
+
+    <!-- og tag end -->
+
+
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
+    <link rel="stylesheet" href="./output.css">
+
     
     <!-- Google Fonts: Poppins for headings, Inter for body -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
@@ -47,66 +50,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="./subcss/styles.css">
-
-    <!-- Custom Configuration for Tailwind  -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Poppins', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            blue: '#0284c7',   /* Matches your primary blue */
-                            dark: '#0f172a',   /* Slate 900 */
-                            yellow: '#fbbf24', /* Matches your yellow accent */
-                            light: '#f8fafc',
-                        }
-                    },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Force contain inside fullscreen modes */
-        video:-webkit-full-screen,
-        video:-moz-full-screen,
-        video:fullscreen,
-        video:-ms-fullscreen {
-            object-fit: contain !important;
-            width: 100% !important;
-            height: 100% !important;
-        }
-
-        /* Hide overlay when .playing class is on container (we toggle from JS) */
-        #videoCard.playing #playOverlay {
-            display: none;
-        }
-
-        /* Prevent pointer events from the overlay from accidentally clicking built-in controls */
-        #playOverlay {
-            pointer-events: auto;
-        }
-    </style>
 
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-yellow selection:text-brand-dark">
@@ -145,7 +88,7 @@
                 <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded-lg">Services</a>
                 <a href="#work" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded-lg">Work</a>
                 <a href="#testimonials" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded-lg">Testimonials</a>
-                <a href="#contact" class="block px-3 py-3 text-base font-medium text-brand-blue font-bold">Contact Me</a>
+                <a href="#contact" class="block px-3 py-3 text-base text-brand-blue font-bold">Contact Me</a>
             </div>
         </div>
     </nav>
@@ -170,10 +113,10 @@
                     
                     <h1 class="text-4xl md:text-6xl font-heading font-bold text-slate-900 leading-tight">
                         Hi, I'm <span class="text-gradient">Amith</span><br>
-                        <span class="text-2xl  md:text-4xl font-normal text-slate-500 mt-2 block typing-cursor">I build <span id="typing-text" class="text-slate-800 font-semibold"></span></span>
+                        <span class="text-xl md:text-4xl font-normal text-slate-500 mt-1 lg:mt-3 block typing-cursor">I build <span id="typing-text" class="text-slate-800 font-semibold"></span></span>
                     </h1>
                     
-                    <p class="text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed ">
+                    <p class="text-md md:text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed ">
                         A passionate developer and designer with 4 years of experience crafting digital experiences. I combine code and motion to bring visions to life.
                     </p>
                     
@@ -235,45 +178,46 @@
         <div class="swiper logo-swiper w-full px-4">
             <div class="swiper-wrapper items-center">
                 <!-- Slides -->
-                <img src="./img/brandsLogo/1filmyscoop.png" alt="Filmyscoop" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1Digiphins.png" alt="Digiphins" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1teju.png" alt="teju masala" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1wunderfit.png" alt="wunderfit" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/AyusCare.png" alt="AyusCare" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1zest job.png" alt="Zest Job" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1eezego.png" alt="eezego" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1Go-expert-service.png" alt="go expert services" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1golden-touch.png" alt="goldentouch" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/voicing_silence.png" alt="goldentouch" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1KNKH.png" alt="KNKH" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1otr.png" alt="on the rocks" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1ninna-sanihake.png" alt="Ninna sanihake" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1Royal-Indraprastha.png" alt="Royal Indraprastha" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1SUFH.png" alt="Sri Udupi food hub" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1teju-fryd.png" alt="Teju fry'd" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1filmyscoop.png" alt="Filmyscoop" class="swiper-slide w-auto h-auto p-2 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Digiphins.png" alt="Digiphins" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1teju.png" alt="teju masala" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1wunderfit.png" alt="wunderfit" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/AyusCare.png" alt="AyusCare" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1zest job.png" alt="Zest Job" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1eezego.png" alt="eezego" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Go-expert-service.png" alt="go expert services" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1golden-touch.png" alt="goldentouch" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/voicing_silence.png" alt="goldentouch" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1KNKH.png" alt="KNKH" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1otr.png" alt="on the rocks" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1ninna-sanihake.png" alt="Ninna sanihake" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1Royal-Indraprastha.png" alt="Royal Indraprastha" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1SUFH.png" alt="Sri Udupi food hub" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                <img src="./img/brandsLogo/1teju-fryd.png" alt="Teju fry'd" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
             </div>
         </div>
 
-
-        <div class="swiper mobile-logo-swiper w-full px-4 mt-8 md:hidden">
-            <div class="swiper-wrapper items-center">
-                <!-- Slides -->
-                <img src="./img/brandsLogo/1wunderfit.png" alt="wunderfit" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                 <img src="./img/brandsLogo/1filmyscoop.png" alt="Filmyscoop" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/AyusCare.png" alt="AyusCare" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1eezego.png" alt="eezego" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1Digiphins.png" alt="Digiphins" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1Go-expert-service.png" alt="go expert services" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1golden-touch.png" alt="goldentouch" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1teju.png" alt="teju masala" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/voicing_silence.png" alt="goldentouch" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1zest job.png" alt="Zest Job" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1KNKH.png" alt="KNKH" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1otr.png" alt="on the rocks" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1ninna-sanihake.png" alt="Ninna sanihake" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1Royal-Indraprastha.png" alt="Royal Indraprastha" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1SUFH.png" alt="Sri Udupi food hub" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
-                <img src="./img/brandsLogo/1teju-fryd.png" alt="Teju fry'd" class="swiper-slide flex justify-center h-24 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+        <div class="md:hidden">
+            <div class="swiper mobile-logo-swiper w-full px-4 mt-8 ">
+                <div class="swiper-wrapper items-center">
+                    <!-- Slides -->
+                    <img src="./img/brandsLogo/1wunderfit.png" alt="wunderfit" class="swiper-slide flex justify-center w-auto h-auto xl:w-10 object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1filmyscoop.png" alt="Filmyscoop" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/AyusCare.png" alt="AyusCare" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1eezego.png" alt="eezego" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1Digiphins.png" alt="Digiphins" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1Go-expert-service.png" alt="go expert services" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1golden-touch.png" alt="goldentouch" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1teju.png" alt="teju masala" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/voicing_silence.png" alt="goldentouch" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1zest job.png" alt="Zest Job" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1KNKH.png" alt="KNKH" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1otr.png" alt="on the rocks" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1ninna-sanihake.png" alt="Ninna sanihake" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1Royal-Indraprastha.png" alt="Royal Indraprastha" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1SUFH.png" alt="Sri Udupi food hub" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                    <img src="./img/brandsLogo/1teju-fryd.png" alt="Teju fry'd" class="swiper-slide flex justify-center w-auto h-auto object-contain transition-all duration-300 hover:scale-110 cursor-pointer">
+                </div>
             </div>
         </div>
 
@@ -325,7 +269,7 @@
     </section>
 
     <!-- Portfolio / Work Section -->
-    <section id="work" class="py-24 bg-white">
+    <section id="work" class="py-18 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between  mb-12 reveal">
                 <div>
@@ -352,7 +296,7 @@
                 </div>
 
                 <div class="swiper web-project-swiper pb-12">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper ">
                         <!-- Project 1 -->
                         <div class="swiper-slide h-auto">
                             <div class="group relative rounded-2xl overflow-hidden shadow-lg reveal h-full">
@@ -425,7 +369,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="project-swiper-pagination relative! bottom-auto! mt-6 flex justify-center"></div>
                 </div>
             </div>
            
@@ -439,7 +383,7 @@
                 <div class="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-4">
                     <!-- tile -->
                     <div class="break-inside-avoid rounded-xl overflow-hidden group cursor-pointer">
-                        <video src="./videos/28-7 chicken curry_1.mp4" class="w-full h-auto object-cover" controls preload="none" poster="./img/thumbnail/chickenCurry.png"></video>
+                        <video src="./videos/28-7 chicken curry_1.mp4" class="w-full h-auto object-cover aspect-9/16" controls preload="none" poster="./img/thumbnail/chickenCurry.png"></video>
                     </div>
 
                     <div class="break-inside-avoid rounded-xl overflow-hidden group cursor-pointer">
@@ -447,7 +391,7 @@
                         controls preload="none" poster="./img/thumbnail/puppylove.png"></video>
                     </div>
 
-                    <div class="col-span-1 md:col-span-2  relative aspect-video rounded-xl overflow-hidden aspect-[4/5] group cursor-pointer reveal delay-150">
+                    <div class="col-span-1 md:col-span-2  relative aspect-video rounded-xl overflow-hidden aspect-4/5 group cursor-pointer reveal delay-150">
                         <img src="./img/works/diabetics.jpg" class="w-full h-full object-cover" alt="Product Design">
                     </div>
 
@@ -471,11 +415,11 @@
                         <video src="./videos/GATHA VAIBHAVA _2.mp4" class="w-full h-full object-cover " alt="Video Thumbnail" controls preload="none" poster="./img/thumbnail/gv.png"></video>
                     </div>
 
-                    <div class="row-span-2 relative rounded-xl aspect-[9/16] overflow-hidden group cursor-pointer reveal delay-200">
+                    <div class="row-span-2 relative rounded-xl aspect-9/16 overflow-hidden group cursor-pointer reveal delay-200">
                          <video src="./videos/7-2 SUFH South Indian Meal.mp4" controls preload="none" class="w-full h-full object-cover" poster="./img/thumbnail/sufh.png"> </video>
                     </div>
 
-                    <div class="col-span-1 relative rounded-xl overflow-hidden aspect-[4/5] group cursor-pointer reveal delay-150">
+                    <div class="col-span-1 relative rounded-xl overflow-hidden aspect-4/5 group cursor-pointer reveal delay-150">
                         <img src="./img/works/insta brown.jpg" class="w-full h-full object-cover" alt="Product Design">
                     </div>
 
@@ -492,20 +436,20 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-24 bg-slate-50 relative overflow-hidden">
+    <section id="testimonials" class="py-20 bg-slate-50 relative overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-yellow/20 rounded-full blur-3xl"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6  py-4 relative z-10">
+            <div class="text-center mb-10 reveal">
                 <h2 class="text-brand-blue font-bold tracking-wide uppercase text-sm mb-2">Testimonials</h2>
                 <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900">People say About us</h3>
             </div>
 
             <!-- Swiper Container for Testimonials -->
-            <div class="swiper testimonial-swiper w-full px-4 pb-12 reveal">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-brand-yellow h-full flex flex-col justify-between">
+            <div class="swiper testimonial-swiper w-full px-4 reveal">
+                <div class="swiper-wrapper py-12 ">
+                    <!-- Slide 1 --> 
+                    <div class="swiper-slide h-auto flex">
+                        <div class="bg-white p-8 rounded-2xl shadow-md border-l-4 border-brand-yellow h-full flex flex-col justify-between">
                             <div>
                                 <div class="flex items-center gap-4 mb-6">
                                     <img src="./img/testimonial/hemath.jpg" alt="Hemanth" class="w-14 h-14 rounded-full object-cover border-2 border-slate-100">
@@ -516,7 +460,7 @@
                                     <i data-lucide="quote" class="ml-auto text-slate-200 w-10 h-10 fill-current"></i>
                                 </div>
                                 <p class="text-slate-600 italic">
-                                    "Amit is a talented and passionate designer and video editor
+                                    "Amith is a talented and passionate designer and video editor
                                     who has been a valuable asset to team for the past three years.
                                     His ability to think creatively and come up with innovative
                                     ideas has likely been a significant factor in his success.
@@ -538,7 +482,7 @@
 
                     <!-- Slide 2 -->
                     <div class="swiper-slide h-auto">
-                         <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-brand-yellow h-full flex flex-col justify-between">
+                         <div class="bg-white p-8 rounded-2xl shadow-md border-l-4 border-brand-yellow h-full flex flex-col justify-between">
                              <div>
                                 <div class="flex items-center gap-4 mb-6">
                                     <img src="./img/testimonial/pruthvi.jpg" alt="Pruthvi" class="w-14 h-14 rounded-full object-cover border-2 border-slate-100">
@@ -566,34 +510,11 @@
                         </div>
                     </div>
 
-                    <!-- Slide 3 (New Placeholder Slide to show scrolling) -->
-                    <!-- <div class="swiper-slide h-auto">
-                         <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-brand-yellow h-full flex flex-col justify-between">
-                             <div>
-                                <div class="flex items-center gap-4 mb-6">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" alt="Sarah" class="w-14 h-14 rounded-full object-cover border-2 border-slate-100">
-                                    <div>
-                                        <h4 class="font-bold text-slate-900">Sarah Jenkins</h4>
-                                        <p class="text-sm text-slate-500">Marketing Lead</p>
-                                    </div>
-                                     <i data-lucide="quote" class="ml-auto text-slate-200 w-10 h-10 fill-current"></i>
-                                </div>
-                                <p class="text-slate-600 italic">
-                                    "Working with Amit was an absolute pleasure. He understood our requirements perfectly and delivered a website that exceeded our expectations. His attention to detail is unmatched."
-                                </p>
-                            </div>
-                            <div class="flex text-brand-yellow mt-6 gap-1">
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
+                <div class="testimonial-swiper-pagination relative! bottom-auto! mt-6 flex justify-center"></div>
+            </div> 
+
+            
         </div>
     </section>
 

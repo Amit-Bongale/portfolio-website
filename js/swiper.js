@@ -1,5 +1,5 @@
 var swiper = new Swiper(".logo-swiper", {
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
     speed: 4000, // Slow continuous speed
@@ -21,12 +21,16 @@ var swiper = new Swiper(".logo-swiper", {
             slidesPerView: 6,
             spaceBetween: 30,
         },
+        1400:{
+            slidesPerView: 9,
+            spaceBetween: 30,
+        }
     },
     allowTouchMove: true, // Allow manual swipe
 });
 
 var mobileLogoSwiper = new Swiper(".mobile-logo-swiper", {
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
 
@@ -66,7 +70,7 @@ var webSwiper = new Swiper(".web-project-swiper", {
         prevEl: ".web-prev",
     },
     pagination: {
-        el: ".swiper-pagination",
+        el: ".project-swiper-pagination",
         clickable: true,
     },
     breakpoints: {
@@ -88,7 +92,7 @@ var testimonialSwiper = new Swiper(".testimonial-swiper", {
         pauseOnMouseEnter: true,
     },
     pagination: {
-        el: ".swiper-pagination",
+        el: ".testimonial-swiper-pagination",
         clickable: true,
     },
     breakpoints: {
