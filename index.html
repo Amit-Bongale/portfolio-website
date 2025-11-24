@@ -39,7 +39,6 @@
 
     <link rel="stylesheet" href="./output.css">
 
-    
     <!-- Google Fonts: Poppins for headings, Inter for body -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
     
@@ -57,10 +56,10 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
+            <div class="flex justify-between h-16 md:h-20 items-center">
                 <!-- Logo -->
                 <a href="/" class="flex items-center gap-2 group">
-                    <img src="./img/logowhite.png" alt="Amith Bongale Creative Developer Brand Logo" class="w-20 mt-1 h-auto filter  invert">
+                    <img src="./img/logowhite.png" alt="Amith Bongale Creative Developer Brand Logo" class="w-16 md:w-20 mt-1 h-auto filter  invert">
                 </a>
 
                 <!-- Desktop Menu -->
@@ -74,7 +73,7 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-blue focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-blue focus:outline-none" aria-label="Toggle mobile menu" >
                         <i data-lucide="menu" class="w-8 h-8"></i>
                     </button>
                 </div>
@@ -111,9 +110,9 @@
                         Available for Freelance
                     </div> -->
                     
-                    <h1 class="text-4xl md:text-6xl font-heading font-bold text-slate-900 leading-tight">
+                    <h1 class="text-3xl md:text-6xl font-heading font-bold text-slate-900 leading-tight">
                         Hi, I'm <span class="text-gradient">Amith</span><br>
-                        <span class="text-xl md:text-4xl font-normal text-slate-500 mt-1 lg:mt-3 block typing-cursor">I build <span id="typing-text" class="text-slate-800 font-semibold"></span></span>
+                        <span class="text-[21px] md:text-4xl font-normal text-slate-500 mt-1 lg:mt-3 block typing-cursor">I build <span id="animatedText" class="text-slate-800 font-semibold "></span></span>
                     </h1>
                     
                     <p class="text-md md:text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed ">
@@ -224,7 +223,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-slate-50">
+    <section id="services" class="py-14 md:py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                 <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">Services That I Offer</h3>
@@ -436,7 +435,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-slate-50 relative overflow-hidden">
+    <section id="testimonials" class="py-10 md:py-20 bg-slate-50 relative overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-yellow/20 rounded-full blur-3xl"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6  py-4 relative z-10">
             <div class="text-center mb-10 reveal">
@@ -514,7 +513,6 @@
                 <div class="testimonial-swiper-pagination relative! bottom-auto! mt-6 flex justify-center"></div>
             </div> 
 
-            
         </div>
     </section>
 
@@ -632,11 +630,12 @@
     <script src="./js/nav.js"></script>
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/swiper.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="./js/swiper.js"></script>
 
     <!-- type annimation -->
-    <script src="./js/type.js"></script>
+    <!-- <script src="./js/type.js"></script> -->
+    <script src="./js/Autotype.js"></script>
 
 
     <script type="application/ld+json">

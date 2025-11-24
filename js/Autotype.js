@@ -1,6 +1,8 @@
-const words = ["A Motion Designer", "A Graphic Designer", "A Web Developer"];
-// const textContainer = document.getElementById("animatedText");
-const textContainer = document.getElementById('typing-text')
+// const words = ["A Motion Designer", "A Graphic Designer", "A Web Developer"];
+const textContainer = document.getElementById("animatedText");
+
+const words = ["Web Applications", "Motion Graphics", "Digital Experiences"];
+// const textContainer = document.getElementById('typing-text')
 
 let wordIndex = 0;
 
